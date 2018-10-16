@@ -1,11 +1,11 @@
 # PictureRecipeAlignment
 
 ## Members
-* Luca Andrei
-* Lupu Bogdan
-* Matcovici Stefan
-* Opariuc Ariana
-* Sitaru Ioana
+* Luca Andrei - MOC1
+* Lupu Bogdan - MOC1
+* Matcovici Stefan - MOC1
+* Opariuc Ariana - MSI1
+* Sitaru Ioana - MOC1
 
 
 ## Documentation
