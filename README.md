@@ -17,3 +17,6 @@ https://trello.com/b/3XXGpQsz/picture-recipe-alignment
 ## Progress
 ### State of the art - week 2
 https://docs.google.com/document/d/1Ec21zUuLNwJhnleOAUio0NvjTU9tlO3XGZbqhMXKX_Y/edit#
+
+### Requirements analyises - week 3
+https://docs.google.com/document/d/1ff-fww28P71qghllSo5EVqpOxtrXfkoGYSwfj55q9WA/edit?usp=sharing
