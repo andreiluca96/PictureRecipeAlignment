@@ -1,10 +1,12 @@
 import argparse
+import copy
 import json
 import sys
 from multiprocessing import Process
 
 import boto3
 import botocore
+import ijson
 
 from boto3.dynamodb.conditions import Key
 from botocore.exceptions import ClientError
@@ -21,7 +23,8 @@ if os.name == 'nt':
         else:
             current_time = timestamp + time.timezone
         return time.localtime(current_time).tm_isdst
-tz.tzlocal._naive_is_dst = _naive_is_dst
+
+    tz.tzlocal._naive_is_dst = _naive_is_dst
 
 
 def is_table_already_created(table):
@@ -77,8 +80,8 @@ def create_recipe_table():
                 }
             ],
             ProvisionedThroughput={
-                'ReadCapacityUnits': 1,
-                'WriteCapacityUnits': 1
+                'ReadCapacityUnits': 5,
+                'WriteCapacityUnits': 20
             }
         )
 
@@ -86,16 +89,30 @@ def create_recipe_table():
 def write_data_to_table_batch(table):
     with open("../data/layer1.json") as json_file:
         print("Opened json file")
-        recipes = json.load(json_file)
-        print("Loaded json file")
-        no_recipes = len(recipes)
-        print("%d recipes to upload" % no_recipes)
+
+        parser = ijson.parse(json_file)
         with table.batch_writer() as batch:
-            for index, item in enumerate(recipes):
-                preprocess_recipe(item)
-                batch.put_item(Item=item)
-                if index % 1000 == 0:
-                    print("%f%% done, reached %d" % ((index / no_recipes) * 100, index))
+            recipe = None
+            index = 0
+            for prefix, event, value in parser:
+                if (prefix, event) == ('item', 'start_map'):
+                    recipe = {}
+                elif (prefix, event) == ('item.ingredients', 'start_array'):
+                    recipe['ingredients'] = []
+                elif prefix == 'item.ingredients.item.text':
+                    recipe['ingredients'].append(value)
+                elif (prefix, event) == ('item.instructions', 'start_array'):
+                    recipe['instructions'] = []
+                elif prefix == 'item.instructions.item.text':
+                    recipe['instructions'].append(value)
+                elif event == 'string':
+                    recipe[prefix.split(".")[1]] = value
+                elif (prefix, event) == ('item', 'end_map'):
+                    preprocess_recipe(recipe)
+                    batch.put_item(Item=recipe)
+                    index += 1
+                    if index % 1000 == 0:
+                        print("%d done" % index)
 
 
 def write_data_to_table_parallel():
@@ -134,7 +151,7 @@ def put_items(index, recipes):
 
 def preprocess_recipe(recipe):
     # TODO: inject crypto stuff here
-    recipe['strip'] = recipe.pop('partition')
+    pass
 
 
 if __name__ == "__main__":
@@ -142,19 +159,23 @@ if __name__ == "__main__":
     parser.add_argument('-pk', '--aws-access-key', help='AWS server public key')
     parser.add_argument('-sk', '--aws-secret-access-key', help='AWS server secret key')
     parser.add_argument('-r', '--region', help='AWS region name', required=True)
-    parser.add_argument('-e', '--endpoint-url',
-                        help='AWS DynamoDB endpoint url, use http://localhost:8000 for local DynamoDB')
+    parser.add_argument('-l', '--local', help='Using http://localhost:8000 for local DynamoDB', action="store_const", const=True)
 
     parse_result = parser.parse_args(sys.argv[1:])
 
-    if parse_result.aws_access_key is not None and parse_result.aws_secret_access_key is not None:
+    if parse_result.local:
+        # using local dynamodb
+        dynamodb = boto3.resource('dynamodb', region_name=parse_result.region, endpoint_url="http://localhost:8000")
+    elif parse_result.aws_access_key is not None and parse_result.aws_secret_access_key is not None:
+        # access tokens provided as parameters to the script
         session = boto3.Session(
             aws_access_key_id=parse_result.aws_access_key,
             aws_secret_access_key=parse_result.aws_secret_access_key,
         )
-        dynamodb = session.resource('dynamodb', region_name=parse_result.region, endpoint_url=parse_result.endpoint_url)
+        dynamodb = session.resource('dynamodb', region_name=parse_result.region)
     else:
-        dynamodb = boto3.resource('dynamodb', region_name=parse_result.region, endpoint_url=parse_result.endpoint_url)
+        # access tokens configured in aws cli
+        dynamodb = boto3.resource('dynamodb', region_name=parse_result.region)
 
     recipe_table = create_recipe_table()
     write_data_to_table_batch(recipe_table)
