@@ -15,3 +15,8 @@ upload_ddb - Creates if not existing and writes objects to recipe table in Dynam
 👍 You can run a local version of DynamoDB for testing purposes [here](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBLocal.DownloadingAndRunning.html)  
 👍Useful commands for dynamodb [aws-cli-dynamodb](https://docs.aws.amazon.com/cli/latest/reference/dynamodb/index.html)
 📙 Library used for communication [boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html)  
+
+
+---
+
+data_setup.sh - Downloads dataset in /data directory

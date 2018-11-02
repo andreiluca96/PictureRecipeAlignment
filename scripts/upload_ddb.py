@@ -1,18 +1,19 @@
-import argparse
-import copy
 import json
+import os
 import sys
+
+import botocore
+import time
 from multiprocessing import Process
 
+import argparse
 import boto3
-import botocore
 import ijson
-
-from boto3.dynamodb.conditions import Key
 from botocore.exceptions import ClientError
-
-import os, time
 from dateutil import tz
+
+DEFAULT_MAX_ATTEMPTS = 4
+DEFAULT_BACKOFF_COEFF = 50.0
 
 if os.name == 'nt':
     def _naive_is_dst(self, dt):
@@ -23,6 +24,7 @@ if os.name == 'nt':
         else:
             current_time = timestamp + time.timezone
         return time.localtime(current_time).tm_isdst
+
 
     tz.tzlocal._naive_is_dst = _naive_is_dst
 
@@ -86,6 +88,31 @@ def create_recipe_table():
         )
 
 
+def default_backoff_func(attempts):
+    if attempts == DEFAULT_MAX_ATTEMPTS:
+        raise RuntimeError("Failed after {} attempts".format(attempts))
+    return (DEFAULT_BACKOFF_COEFF * (2 ** attempts)) / 1000.0
+
+
+def __call__(batch, recipe):
+    attempts = 1
+    while True:
+        try:
+            batch.put_item(Item=recipe)
+        except botocore.exceptions.ClientError as error:
+            error_code = error.response['Error']['Code']
+            print(error_code)
+            if error_code != "ProvisionedThroughputExceededException":
+                raise error
+        else:
+            return
+
+        delay = default_backoff_func(attempts)
+        print("Failed, now sleeping for %f seconds" % delay)
+        time.sleep(delay)
+        attempts += 1
+
+
 def write_data_to_table_batch(table):
     with open("../data/layer1.json") as json_file:
         print("Opened json file")
@@ -109,8 +136,9 @@ def write_data_to_table_batch(table):
                     recipe[prefix.split(".")[1]] = value
                 elif (prefix, event) == ('item', 'end_map'):
                     preprocess_recipe(recipe)
-                    batch.put_item(Item=recipe)
+                    __call__(batch, recipe)
                     index += 1
+                    print(index)
                     if index % 1000 == 0:
                         print("%d done" % index)
 
@@ -151,7 +179,7 @@ def put_items(index, recipes):
 
 def preprocess_recipe(recipe):
     # TODO: inject crypto stuff here
-    pass
+    recipe['strip'] = recipe.pop('partition')
 
 
 if __name__ == "__main__":
@@ -159,7 +187,8 @@ if __name__ == "__main__":
     parser.add_argument('-pk', '--aws-access-key', help='AWS server public key')
     parser.add_argument('-sk', '--aws-secret-access-key', help='AWS server secret key')
     parser.add_argument('-r', '--region', help='AWS region name', required=True)
-    parser.add_argument('-l', '--local', help='Using http://localhost:8000 for local DynamoDB', action="store_const", const=True)
+    parser.add_argument('-l', '--local', help='Using http://localhost:8000 for local DynamoDB', action="store_const",
+                        const=True)
 
     parse_result = parser.parse_args(sys.argv[1:])
 
