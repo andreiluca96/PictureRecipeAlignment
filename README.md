@@ -27,3 +27,7 @@ https://docs.google.com/document/d/1ff-fww28P71qghllSo5EVqpOxtrXfkoGYSwfj55q9WA/
 * script for fetching the data
 * application frontend
 * searchable encryption research - https://docs.google.com/document/d/1p0v5q3lLDJ5MsIOmnD5QkLZh3SdiT02TlZx5lYnWhDE/edit?usp=sharing
+
+### Progress - week 5
+* BPMN diagrams
+* Test driven development
