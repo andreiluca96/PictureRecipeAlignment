@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">PictureRecipeAlignment</string>
+    <string name="title_activity_camera">Camera</string>
 </resources>
