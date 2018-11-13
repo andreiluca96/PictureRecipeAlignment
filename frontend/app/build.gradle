@@ -39,7 +39,7 @@ dependencies {
     implementation 'com.android.support:design:27.1.1'
     androidTestImplementation 'com.21buttons:fragment-test-rule:1.1.0'
     debugImplementation 'com.21buttons:fragment-test-rule-extras:1.1.0'
-    compile 'org.aspectj:aspectjrt:1.8.10'
+    implementation 'org.aspectj:aspectjrt:1.8.10'
 }
 
 final def log = project.logger
