@@ -13,7 +13,7 @@ public class TimeMonitorAspect {
     public long startedTime = 0;
     public static String TAG = "Time-ASPECT";
 
-    @Pointcut("execution(void *.onButton*Click(..))")
+    @Pointcut("execution(void *.onClick*(..))")
     public void onButtonClick() {}
 
     @Before("onButtonClick() && args(view)")

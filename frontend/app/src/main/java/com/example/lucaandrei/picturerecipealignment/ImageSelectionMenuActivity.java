@@ -2,16 +2,19 @@ package com.example.lucaandrei.picturerecipealignment;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
 import com.example.lucaandrei.picturerecipealignment.camera.CameraActivity;
 
-import java.io.FileNotFoundException;
+import org.apache.commons.io.IOUtils;
+
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
 import java.io.InputStream;
 
 public class ImageSelectionMenuActivity extends AppCompatActivity {
@@ -56,8 +59,9 @@ public class ImageSelectionMenuActivity extends AppCompatActivity {
         if (requestCode == PICK_IMAGE && resultCode == RESULT_OK) {
             try {
                 InputStream inputStream = getApplicationContext().getContentResolver().openInputStream(data.getData());
+                processPicture(IOUtils.toByteArray(inputStream));
                 //TODO: request with the selected picture
-            } catch (FileNotFoundException e) {
+            } catch (IOException e) {
                 e.printStackTrace();
             }
         }
@@ -65,10 +69,20 @@ public class ImageSelectionMenuActivity extends AppCompatActivity {
         if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
             Bundle extras = data.getExtras();
             Bitmap imageBitmap = (Bitmap) extras.get("data");
+
+            ByteArrayOutputStream stream = new ByteArrayOutputStream();
+            imageBitmap.compress(Bitmap.CompressFormat.PNG, 100, stream);
+            processPicture(stream.toByteArray());
+            imageBitmap.recycle();
+
             ImageView mImageView = new ImageView(getApplicationContext());
             mImageView.setImageBitmap(imageBitmap);
             //TODO: get full size picture and request
         }
+    }
+
+    private void processPicture(byte[] picture) {
+        //TODO: store the picture somewhere
     }
 
     public void startCameraActivity() {

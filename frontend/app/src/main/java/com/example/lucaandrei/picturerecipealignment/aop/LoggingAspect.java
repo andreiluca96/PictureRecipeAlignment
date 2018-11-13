@@ -14,8 +14,11 @@ import org.aspectj.lang.annotation.Pointcut;
 class LoggingAspect {
     public static String TAG = "LOGGING-ASPECT";
 
-    @Pointcut("execution(void *.onButton*Click(..))")
+    @Pointcut("execution(void *.onClick*(..))")
     public void onButtonClick() {}
+
+    @Pointcut("execution(void *.processPicture(..))")
+    public void onPictureTaken() {}
 
     @Before("onButtonClick() && args(view)")
     public void beforeButton(View view) {
@@ -35,5 +38,10 @@ class LoggingAspect {
         }
         Activity host = (Activity) view.getContext();
         Log.i(TAG, String.format("After [%s-%s] button click", host.getClass().getSimpleName(), text));
+    }
+
+    @After("onPictureTaken() && args(picture)")
+    public void beforePicture(byte[] picture) {
+        Log.i(TAG, String.format("Received picture of size %d", picture.length));
     }
 }
