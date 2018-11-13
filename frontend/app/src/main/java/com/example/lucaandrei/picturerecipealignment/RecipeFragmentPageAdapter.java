@@ -5,6 +5,7 @@ import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.view.WindowManager;
 
 import com.example.lucaandrei.picturerecipealignment.tabs.IngredientsFragment;
 import com.example.lucaandrei.picturerecipealignment.tabs.InstructionsFragment;

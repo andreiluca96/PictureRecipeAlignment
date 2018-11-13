@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -26,12 +27,15 @@ public class IngredientsFragment extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+
+        getActivity().getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE|WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE);
+
         // get ingredients list
         final ListView list = (ListView)this.getActivity().findViewById(R.id.ingredients_list);
 
-        final ArrayList<String> products = new ArrayList<String>();
+        final ArrayList<String> ingredients = new ArrayList<String>();
         final ArrayAdapter<String> itemsAdapter =
-                new ArrayAdapter<String>(this.getActivity(), android.R.layout.simple_list_item_1, products);
+                new ArrayAdapter<String>(this.getActivity(), android.R.layout.simple_list_item_1, ingredients);
         list.setAdapter(itemsAdapter);
 
         Button add = this.getActivity().findViewById(R.id.add_ingredient);
@@ -46,10 +50,23 @@ public class IngredientsFragment extends Fragment {
                 String ingredient = addIngredientComponent.getText().toString();
 
                 //add the new ingredient to list view
-                products.add(ingredient);
+                ingredients.add(ingredient);
 
                 //reset input
                 addIngredientComponent.setText("");
+
+                itemsAdapter.notifyDataSetChanged();
+            }
+        });
+
+        Button submit = this.getActivity().findViewById(R.id.submit_ingredients);
+        submit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //TODO: request with ingredients array
+
+                // empty ingredients list
+                ingredients.clear();
 
                 itemsAdapter.notifyDataSetChanged();
             }

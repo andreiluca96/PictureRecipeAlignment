@@ -28,19 +28,19 @@
             android:textSize="18sp" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/button_camera"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Camera" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/button_gallery"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Gallery" />
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/button_link"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Image link" />
