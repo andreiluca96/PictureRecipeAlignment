@@ -39,7 +39,7 @@ public class IngredientTest {
         Assert.assertTrue(ingredient1.equals(ingredient2));
     }
 
-    @Test(expected = IllegalArgumentException.class)
+    @Test(expected = RuntimeException.class)
     public void Given_EmptyName_When_SetIngredientName_Then_ThrowInvalidArgumentException() {
         String emptyString = "";
 
