@@ -31,3 +31,7 @@ https://docs.google.com/document/d/1ff-fww28P71qghllSo5EVqpOxtrXfkoGYSwfj55q9WA/
 ### Progress - week 5
 * BPMN diagrams
 * Test driven development
+
+### Progress - week 6
+* AOP with AspectJ
+* Frontend Android app improvements
