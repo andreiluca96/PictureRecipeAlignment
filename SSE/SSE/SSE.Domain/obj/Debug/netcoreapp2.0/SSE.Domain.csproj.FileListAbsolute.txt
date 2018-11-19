@@ -1,0 +1,8 @@
+D:\Facultate\master1\masterIP\PictureRecipeAlignment\SSE\SSE\SSE.Domain\bin\Debug\netcoreapp2.0\SSE.Domain.deps.json
+D:\Facultate\master1\masterIP\PictureRecipeAlignment\SSE\SSE\SSE.Domain\bin\Debug\netcoreapp2.0\SSE.Domain.dll
+D:\Facultate\master1\masterIP\PictureRecipeAlignment\SSE\SSE\SSE.Domain\bin\Debug\netcoreapp2.0\SSE.Domain.pdb
+D:\Facultate\master1\masterIP\PictureRecipeAlignment\SSE\SSE\SSE.Domain\obj\Debug\netcoreapp2.0\SSE.Domain.csproj.CoreCompileInputs.cache
+D:\Facultate\master1\masterIP\PictureRecipeAlignment\SSE\SSE\SSE.Domain\obj\Debug\netcoreapp2.0\SSE.Domain.AssemblyInfoInputs.cache
+D:\Facultate\master1\masterIP\PictureRecipeAlignment\SSE\SSE\SSE.Domain\obj\Debug\netcoreapp2.0\SSE.Domain.AssemblyInfo.cs
+D:\Facultate\master1\masterIP\PictureRecipeAlignment\SSE\SSE\SSE.Domain\obj\Debug\netcoreapp2.0\SSE.Domain.dll
+D:\Facultate\master1\masterIP\PictureRecipeAlignment\SSE\SSE\SSE.Domain\obj\Debug\netcoreapp2.0\SSE.Domain.pdb

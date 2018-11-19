@@ -1,0 +1,8 @@
+D:\Facultate\master1\masterIP\PictureRecipeAlignment\SSE\SSE\SSE.CqrsCore\bin\Debug\netcoreapp2.0\SSE.CqrsCore.deps.json
+D:\Facultate\master1\masterIP\PictureRecipeAlignment\SSE\SSE\SSE.CqrsCore\bin\Debug\netcoreapp2.0\SSE.CqrsCore.dll
+D:\Facultate\master1\masterIP\PictureRecipeAlignment\SSE\SSE\SSE.CqrsCore\bin\Debug\netcoreapp2.0\SSE.CqrsCore.pdb
+D:\Facultate\master1\masterIP\PictureRecipeAlignment\SSE\SSE\SSE.CqrsCore\obj\Debug\netcoreapp2.0\SSE.CqrsCore.csproj.CoreCompileInputs.cache
+D:\Facultate\master1\masterIP\PictureRecipeAlignment\SSE\SSE\SSE.CqrsCore\obj\Debug\netcoreapp2.0\SSE.CqrsCore.AssemblyInfoInputs.cache
+D:\Facultate\master1\masterIP\PictureRecipeAlignment\SSE\SSE\SSE.CqrsCore\obj\Debug\netcoreapp2.0\SSE.CqrsCore.AssemblyInfo.cs
+D:\Facultate\master1\masterIP\PictureRecipeAlignment\SSE\SSE\SSE.CqrsCore\obj\Debug\netcoreapp2.0\SSE.CqrsCore.dll
+D:\Facultate\master1\masterIP\PictureRecipeAlignment\SSE\SSE\SSE.CqrsCore\obj\Debug\netcoreapp2.0\SSE.CqrsCore.pdb

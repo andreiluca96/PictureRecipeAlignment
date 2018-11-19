@@ -1,0 +1,10 @@
+D:\Facultate\master1\masterIP\PictureRecipeAlignment\SSE\SSE\SSE.WebApi\bin\Debug\netcoreapp2.0\SSE.WebApi.deps.json
+D:\Facultate\master1\masterIP\PictureRecipeAlignment\SSE\SSE\SSE.WebApi\bin\Debug\netcoreapp2.0\SSE.WebApi.runtimeconfig.json
+D:\Facultate\master1\masterIP\PictureRecipeAlignment\SSE\SSE\SSE.WebApi\bin\Debug\netcoreapp2.0\SSE.WebApi.runtimeconfig.dev.json
+D:\Facultate\master1\masterIP\PictureRecipeAlignment\SSE\SSE\SSE.WebApi\bin\Debug\netcoreapp2.0\SSE.WebApi.dll
+D:\Facultate\master1\masterIP\PictureRecipeAlignment\SSE\SSE\SSE.WebApi\bin\Debug\netcoreapp2.0\SSE.WebApi.pdb
+D:\Facultate\master1\masterIP\PictureRecipeAlignment\SSE\SSE\SSE.WebApi\obj\Debug\netcoreapp2.0\SSE.WebApi.csproj.CoreCompileInputs.cache
+D:\Facultate\master1\masterIP\PictureRecipeAlignment\SSE\SSE\SSE.WebApi\obj\Debug\netcoreapp2.0\SSE.WebApi.AssemblyInfoInputs.cache
+D:\Facultate\master1\masterIP\PictureRecipeAlignment\SSE\SSE\SSE.WebApi\obj\Debug\netcoreapp2.0\SSE.WebApi.AssemblyInfo.cs
+D:\Facultate\master1\masterIP\PictureRecipeAlignment\SSE\SSE\SSE.WebApi\obj\Debug\netcoreapp2.0\SSE.WebApi.dll
+D:\Facultate\master1\masterIP\PictureRecipeAlignment\SSE\SSE\SSE.WebApi\obj\Debug\netcoreapp2.0\SSE.WebApi.pdb

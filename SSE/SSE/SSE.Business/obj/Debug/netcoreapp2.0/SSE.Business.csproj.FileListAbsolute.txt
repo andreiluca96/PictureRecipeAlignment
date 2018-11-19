@@ -1,0 +1,12 @@
+D:\Facultate\master1\masterIP\PictureRecipeAlignment\SSE\SSE\SSE.Business\bin\Debug\netcoreapp2.0\SSE.Business.deps.json
+D:\Facultate\master1\masterIP\PictureRecipeAlignment\SSE\SSE\SSE.Business\bin\Debug\netcoreapp2.0\SSE.Business.dll
+D:\Facultate\master1\masterIP\PictureRecipeAlignment\SSE\SSE\SSE.Business\bin\Debug\netcoreapp2.0\SSE.Business.pdb
+D:\Facultate\master1\masterIP\PictureRecipeAlignment\SSE\SSE\SSE.Business\bin\Debug\netcoreapp2.0\SSE.Domain.dll
+D:\Facultate\master1\masterIP\PictureRecipeAlignment\SSE\SSE\SSE.Business\bin\Debug\netcoreapp2.0\SSE.Domain.pdb
+D:\Facultate\master1\masterIP\PictureRecipeAlignment\SSE\SSE\SSE.Business\obj\Debug\netcoreapp2.0\SSE.Business.csprojResolveAssemblyReference.cache
+D:\Facultate\master1\masterIP\PictureRecipeAlignment\SSE\SSE\SSE.Business\obj\Debug\netcoreapp2.0\SSE.Business.csproj.CoreCompileInputs.cache
+D:\Facultate\master1\masterIP\PictureRecipeAlignment\SSE\SSE\SSE.Business\obj\Debug\netcoreapp2.0\SSE.Business.AssemblyInfoInputs.cache
+D:\Facultate\master1\masterIP\PictureRecipeAlignment\SSE\SSE\SSE.Business\obj\Debug\netcoreapp2.0\SSE.Business.AssemblyInfo.cs
+D:\Facultate\master1\masterIP\PictureRecipeAlignment\SSE\SSE\SSE.Business\obj\Debug\netcoreapp2.0\SSE.Business.csproj.CopyComplete
+D:\Facultate\master1\masterIP\PictureRecipeAlignment\SSE\SSE\SSE.Business\obj\Debug\netcoreapp2.0\SSE.Business.dll
+D:\Facultate\master1\masterIP\PictureRecipeAlignment\SSE\SSE\SSE.Business\obj\Debug\netcoreapp2.0\SSE.Business.pdb
