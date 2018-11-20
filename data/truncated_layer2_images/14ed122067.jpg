@@ -1,0 +1,271 @@
+<!DOCTYPE HTML>
+<html lang="ro-RO" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <title>TELEKOM</title>
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height" />
+    <meta name="format-detection" content="telephone=yes" />
+
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="dcterms.rights" content="All rights reserved">
+    <meta name="dcterms.dateCopyrighted" content="2014">
+    <meta name="author" content="Interactions Marketing">
+    <meta name="referrer" content="default" />
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/init.css" />
+    <link rel="stylesheet" type="text/css" href="css/media.css" />
+    <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+    
+    
+        <!-- Piwik -->
+        <script type="text/javascript">
+          var _paq = _paq || [];
+          _paq.push(['trackPageView']);
+          _paq.push(['enableLinkTracking']);
+          (function() {
+            var u=(("https:" == document.location.protocol) ? "https" : "http") + "://statistics.romtelecom.net/";
+            _paq.push(['setTrackerUrl', u+'piwik.php']);
+            _paq.push(['setSiteId', 31]);
+            var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript';
+            g.defer=true; g.async=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+          })();
+        </script>
+        <!-- End Piwik Code -->
+    
+
+    
+        <script type="text/javascript" src="//ro.adocean.pl/files/js/ado.js"></script>
+        <script type="text/javascript">
+            /* (c)AdOcean 2003-2014 */
+            if(typeof ado!=="object"){ado={};ado.config=ado.preview=ado.placement=ado.master=ado.slave=function(){};}
+            ado.config({mode: "old", xml: false, characterEncoding: true});
+            ado.preview({enabled: true, emiter: "ro.adocean.pl", id: "9o_nnmMOl7DVtYDXaZt4a6fiYvE4HBI1Yn6GfTZu5v3.E7"});
+        </script>
+
+        <!-- start master -->
+        <script type="text/javascript">
+            /* (c)AdOcean 2003-2014, MASTER: gb_ro.www.cauta.telekom.ro.Homepage */
+            ado.master({id: 'CL.6KV3iQz4gNMKrelf9kNGwELh3WkOKFrc6ByuRPh7.57', server: 'ro.adocean.pl' });
+        </script>
+        <!--  end master  -->
+    
+</head>
+
+<body>
+<div class="cookieMessage" style="position: absolute;z-index: 101;top: 0;left: 0;right: 0;background-color:rgba(214, 44, 61, 0.8);font-size:16px;  line-height: 25px;color: #ffffff;text-align: center;display: none;">Acest site foloseste cookie-uri. Prin continuarea navigarii in site, accepti modul in care folosim aceste informatii. Afla mai multe <a href="Informare-cookie.pdf" title="Afla mai multe" target="_blank">aici</a>. <button id="okCookie" name="okCookie">Inchide</button></div>
+
+    <script type="text/javascript">dataLayer = [{'section': 'parkedDomain'}];</script>
+
+    <!-- Google Tag Manager -->
+    <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5LVDRM"
+                      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-5LVDRM');</script>
+    <!-- End Google Tag Manager -->
+
+
+    <!-- Cookie -->
+    <script>
+        jQuery(document).ready(function($) {
+            var x = document.cookie.indexOf("cookiementions=cookie");
+            if (parseInt(x) >= 0) {
+                $(".cookieMessage").remove();
+            } else {
+                $("#okCookie").on("click", function () {
+                    document.cookie = 'cookiementions=cookie; expires=Sat, 1 Sep 2015 00:00:00 UTC';
+                    $(".cookieMessage").hide().remove();
+                });
+                $(".cookieMessage").show();
+            }
+        });
+
+    </script>
+    <!-- Cookie -->
+
+<div class="superRow top-spacer only-mobile">
+    <div class="autoRow">
+        <a href="index.php"><img src="images/identity.png" alt="TELEKOM" border="0" /></a>
+    </div>
+</div>
+
+<header class="header superRow">
+    <a href="#"><div class="logoTelekom only-web"></div></a>
+    <div class="superRow">
+        <div class="autoRowbranding">
+            <a href="http://www.localhub.ro/?utm_source=DNS%20Error%20page&utm_medium=branding&utm_campaign=LocalHub_general"><img src="images/branding-top.png" alt="TELEKOM" border="0" class="img-responsive img-top" style="  margin: 0 auto;" /></a>
+        </div>
+    </div>
+    <div class="superRow">
+        <div class="autoRowtop">
+        </div>
+    </div>
+    <div class="superRow">
+        <div class="autoRow">
+            <div class="autoRowcontent">
+                <div class="pageLogo">
+                    <div class="pageSearch">
+                        <p style="font-size: 38px">Ups! Pagina nu poate fi accesată.</p>
+                        <p style="font-size: 25px"><br>Te rugăm să încerci din nou sau să folosești <br class="only-web">funcția de căutare de mai jos.</p>
+
+                        <form action="http://www.google.com/search" method="get" class="top-spacer">
+                            <div class="input-group">
+                                <input type="text" value="" maxlength="255" name="q" class="form-control frm-search">
+                                <span class="input-group-btn">
+                                    <button type="submit" class="btn btn-default">
+                                        <span class="glyphicon glyphicon-search"></span>
+                                    </button>
+                                </span>
+                            </div>
+
+                            <div class="top-spacer only-web"></div>
+                            <div>
+                                <div class="search_google text-left">
+                                    <input type="radio" checked="" value="" name="sitesearch"> Caută orice tip de informație <br class="only-web">(pagini web, imagini, videoclipuri, etc.)<br>
+                                    <img src="images/google.png" alt="" border="0" style="margin-top:10px;" class="only-web" />
+                                </div>
+                                <div class="search_lh" text-left>
+                                    <input type="radio" value="localhub.ro" name="sitesearch"> Caută datele de contact ale afacerilor din Romania <br class="only-web">(adresa, nr. de telefon, email etc)<br>
+                                    <img src="images/lh.png" alt="" border="0" style="margin-top:10px;" class="only-web" />
+                                </div>
+                                <div class="search_t" text-left>
+                                    <input type="radio" value="telekom.ro" name="sitesearch"> Caută servicii Telekom <br class="only-web">(voce, internet, televiziune)<br>
+                                    <img src="images/T.png" alt="" border="0" style="margin-top:10px;" class="only-web" />
+                                </div>
+                            </div>
+
+                            <div class="clear"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</header>
+<div class="superRow">
+    <div class="autoRow top-spacer">
+        <div class="autoRowcontent banner-custom">
+            <div class="banner970x250">
+                <a href="http://www.localhub.ro/?utm_source=DNS%20Error%20page&utm_medium=branding&utm_campaign=LocalHub_general"><img src="images/banner.jpg" class="img-responsive" /></a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="superRow">
+    <div class="autoRow top-spacer" style="font-size:22px">
+        <div class="autoRowcontent">
+            <div class="home-gradient only-web">&nbsp;</div>
+            <div class="afacerea">Promovează-ți afacerea aici: </div>
+        </div>
+    </div>
+    <div class="autoRow top-spacer">
+        <div class="autoRowcontent">
+            <div class="banner300x250 first">
+                
+                    <!-- start slave -->
+                    <div id="adoceanropehscxhpgb"></div>
+                    <script type="text/javascript">
+                        /* (c)AdOcean 2003-2014, gb_ro.www.cauta.telekom.ro.Homepage.300x250_1 */
+                        ado.slave('adoceanropehscxhpgb', {myMaster: 'CL.6KV3iQz4gNMKrelf9kNGwELh3WkOKFrc6ByuRPh7.57' });
+                    </script>
+                    <!--  end slave  -->
+                
+            </div>
+            <div class="banner300x250 middle">
+                
+                    <!-- start slave -->
+                    <div id="adoceanrozffpjrlikv"></div>
+                    <script type="text/javascript">
+                        /* (c)AdOcean 2003-2014, gb_ro.www.cauta.telekom.ro.Homepage.300x250_2 */
+                        ado.slave('adoceanrozffpjrlikv', {myMaster: 'CL.6KV3iQz4gNMKrelf9kNGwELh3WkOKFrc6ByuRPh7.57' });
+                    </script>
+                    <!--  end slave  -->
+                
+            </div>
+            <div class="banner300x250 last">
+                
+                    <!-- start slave -->
+                    <div id="adoceanrowgmfnofnfq"></div>
+                    <script type="text/javascript">
+                        /* (c)AdOcean 2003-2014, gb_ro.www.cauta.telekom.ro.Homepage.300x250_3 */
+                        ado.slave('adoceanrowgmfnofnfq', {myMaster: 'CL.6KV3iQz4gNMKrelf9kNGwELh3WkOKFrc6ByuRPh7.57' });
+                    </script>
+                    <!--  end slave  -->
+                
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</div>
+
+<div class="superRow">
+    <div class="autoRow top-spacer" style="font-size:22px">
+        <div class="autoRowcontent">
+            <div class="home-gradient">&nbsp;</div>
+            <div style="position: relative; top:-16px; background-color: #FFFFFF; width:140px;">Îți recomandăm: </div>
+        </div>
+    </div>
+    <div class="autoRow top-spacer">
+        <div class="autoRowcontent" style="min-height:270px;">
+            <div class="banner970x250">
+                
+                    <!-- start slave -->
+                    <div id="adoceanrothdmqlprpl"></div>
+                    <script type="text/javascript">
+                        /* (c)AdOcean 2003-2014, gb_ro.www.cauta.telekom.ro.Homepage.970x250 */
+                        ado.slave('adoceanrothdmqlprpl', {myMaster: 'CL.6KV3iQz4gNMKrelf9kNGwELh3WkOKFrc6ByuRPh7.57' });
+                    </script>
+                    <!--  end slave  -->
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="superRow footer-links top-spacer text-center">
+    <div class="autoRow top-spacer" style="background-image: none;">
+        <ul class="menu">
+            <li><a href="termeni.php">Termeni și condiții</a></li>
+                            <li><img alt="" src="images/sep.png" class="separator"></li>
+                <li><a href="optiuni.php">Instructiuni de dezactivare</a></li>
+                        <li><img alt="" src="images/sep.png" class="separator"></li>
+            <li><a href="faq.php">Intrebari frecvente</a></li>
+            <li><img alt="" src="images/sep.png" class="separator"></li>
+            <li><a href="contact.php">Contact</a></li>
+            <li><img alt="" src="images/sep.png" class="separator"></li>
+            <li><a href="Informare-cookie.pdf" target="_blank">Cookies</a></li>
+        </ul>
+    </div>
+    <div class="autoRow top-spacer text-center" style="background-image: none;">
+        <img src="images/powered-by-t.png" alt="" border="0" />
+    </div>
+    <div class="autoRow top-spacer" style="background-image: none;">&nbsp;</div>
+</div>
+
+<div class="superRow top-spacer text-center" style="  background-color: #ffffff;    padding: 25px 0;">
+    <div class="autoRow text-center" style="  background-image: none;">
+        <div class="autoRowcontent">
+            <a href="http://www.dolcetv.ro" class="logo logo1"> </a>
+            <a href="http://www.clickshop.ro" class="logo logo2"> </a>
+            <a href="http://www.dolce-sport.ro" class="logo logo3"> </a>
+            <a href="http://www.germanos.ro" class="logo logo4"> </a>
+            <a href="http://www.telekom.ro" class="logo logo5"> </a>
+            <a href="http://www.realestate.telekom.ro" class="logo logo6"></a>
+            <a href="http://www.localhub.ro" class="logo logo7"></a>
+        </div>
+    </div>
+</div>
+<div class="clearfix"></div>
+</body>
+</html>
