@@ -35,3 +35,9 @@ https://docs.google.com/document/d/1ff-fww28P71qghllSo5EVqpOxtrXfkoGYSwfj55q9WA/
 ### Progress - week 6
 * AOP with AspectJ
 * Frontend Android app improvements
+
+### Progress - week 7
+* Research and POCs for image/recipe recognition
+
+### Progress - week 8
+* Work on MVP
