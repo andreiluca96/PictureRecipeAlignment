@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <PackageReference Include="Autofac" Version="4.8.1" />
+    <PackageReference Include="CSharpFunctionalExtensions" Version="1.13.0" />
   </ItemGroup>
 
   <ItemGroup>

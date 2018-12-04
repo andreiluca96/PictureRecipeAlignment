@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.0",
-    "signature": "f8ff694bc1cee5dcfa73e9619a9e76eccce6d7b8"
+    "signature": "0800782a7e9892a5e19c1c6a4248faec33f8c556"
   },
   "compilationOptions": {},
   "targets": {
@@ -9,6 +9,7 @@
       "SSE.Infrastructure/1.0.0": {
         "dependencies": {
           "Autofac": "4.8.1",
+          "CSharpFunctionalExtensions": "1.13.0",
           "SSE.Business": "1.0.0"
         },
         "runtime": {
@@ -21,6 +22,11 @@
         },
         "runtime": {
           "lib/netstandard1.1/Autofac.dll": {}
+        }
+      },
+      "CSharpFunctionalExtensions/1.13.0": {
+        "runtime": {
+          "lib/netstandard2.0/CSharpFunctionalExtensions.dll": {}
         }
       },
       "Microsoft.NETCore.Targets/1.0.1": {},
@@ -61,6 +67,13 @@
       "sha512": "sha512-aIT9rupCOdab5RMfxvWTBmOxGU77tLqmvSF4V89SzV6oQcJrtuKw/Xp55xy9EijSktbMka55SbroAPOyT+lziw==",
       "path": "autofac/4.8.1",
       "hashPath": "autofac.4.8.1.nupkg.sha512"
+    },
+    "CSharpFunctionalExtensions/1.13.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-PgUYQwL5eMa3jrEpH21hfV3HIihpJ/2/P3MLEpsd6HRgAQim/F2GgCdQbd1oatB9NYialhUR9tISnWXG8rWdMQ==",
+      "path": "csharpfunctionalextensions/1.13.0",
+      "hashPath": "csharpfunctionalextensions.1.13.0.nupkg.sha512"
     },
     "Microsoft.NETCore.Targets/1.0.1": {
       "type": "package",
