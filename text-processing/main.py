@@ -5,13 +5,10 @@ import json
 import re
 
 from gensim.models import word2vec
-from keras import Sequential
-from keras.layers import Embedding, LSTM, Dense
 from keras_preprocessing.sequence import pad_sequences
 from keras_preprocessing.text import Tokenizer
 from nltk.corpus import stopwords
 from nltk.stem import SnowballStemmer
-from sklearn.model_selection import train_test_split
 
 TRAIN_DATA_FILE = './input/layer1.json'
 
@@ -61,17 +58,16 @@ def text_to_wordlist(text, remove_stopwords=False, stem_words=False):
         stemmed_words = [stemmer.stem(word) for word in text]
         text = " ".join(stemmed_words)
 
-    return (text)
+    return text
 
 
 def load_train_data(filename):
     trainrecipts = json.load(open(filename, 'r'))
-    ingredients = []
+    ingreds = []
     for recipe in trainrecipts:
-        for ingr in recipe[u'ingredients']:
-            ingredients.append(ingr[u'text'])
+        ingreds.append({'id': recipe['id'], 'ingredients_text': recipe['ingredients']})
 
-    return ingredients
+    return ingreds
 
 
 # ingredients_length_mean = np.mean([len(x.split(' ')) for x in ingredients])
@@ -106,20 +102,51 @@ def get_model():
     embed_dim = 128
     lstm_out = 200
 
-    model = Sequential()
-    model.add(Embedding(2500, embed_dim, input_length=data.shape[1], dropout=0.2))
-    model.add(LSTM(lstm_out, dropout_U=0.2, dropout_W=0.2))
-    model.add(Dense(2, activation='softmax'))
-    model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
-    print(model.summary())
+    # model = Sequential()
+    # model.add(Embedding(2500, embed_dim, input_length=data.shape[1], dropout=0.2))
+    # model.add(LSTM(lstm_out, dropout_U=0.2, dropout_W=0.2))
+    # model.add(Dense(2, activation='softmax'))
+    # model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
+    # print(model.summary())
+
+
+def load_train_tags(path):
+    with open(path, 'r') as input_tag_file:
+        train_tags = json.load(input_tag_file)
+        return train_tags
+
+
+def merge_lists(l1, l2, key):
+    merged = {}
+    for item in l1 + l2:
+        if item[key] in merged:
+            merged[item[key]].update(item)
+        else:
+            merged[item[key]] = item
+    return merged
+
+
+def preprocess_train_data():
+    train_data = load_train_data('input/layer1.json')
+    train_tags = load_train_tags('input/det_ingrs.json')
+    merged_train_data = merge_lists(train_tags, train_data, 'id')
+    x = []
+    y = []
+    for entry in merged_train_data.values():
+        x.append(list(filter(lambda x: entry['valid'][entry['ingredients_text'].index(x)], entry['ingredients_text'])))
+        y.append(list(filter(lambda x: entry['valid'][entry['ingredients'].index(x)], entry['ingredients'])))
+    x = [item['text'] for entry in x for item in entry]
+    y = [item['text'] for entry in y for item in entry]
+
+    return x, y
 
 
 if __name__ == "__main__":
-    ingredients = load_train_data(TRAIN_DATA_FILE)
+    X, Y = preprocess_train_data()
 
     all_words = []
     ingredients_text_processed = []
-    for ingr in ingredients:
+    for ingr in X:
         words = re.findall("[a-zA-Z0-9'\-]+", ingr)
         ingredients_text_processed.append(' '.join(words))
         all_words.append([w.lower() for w in words])
@@ -135,13 +162,8 @@ if __name__ == "__main__":
 
     data = pad_sequences(sequences, maxlen=10)
 
-    with open('input/det_ingrs.json', 'r') as input_tag_file:
-        train_tags = json.load(input_tag_file)
-
-    model = get_model()
-
-    X_train, X_valid, Y_train, Y_valid = train_test_split(X, Y, test_size=0.20, random_state=36)
-
-    # Here we train the Network.
-    batch_size = 32
-    model.fit(X_train, Y_train, batch_size=batch_size, nb_epoch=1, verbose=5)
+    # X_train, X_valid, Y_train, Y_valid = train_test_split(X, Y, test_size=0.20, random_state=36)
+    #
+    # # Here we train the Network.
+    # batch_size = 32
+    # model.fit(X_train, Y_train, batch_size=batch_size, nb_epoch=1, verbose=5)
