@@ -1,0 +1,23 @@
+[
+  {
+    "valid": [true, true, true, true, true, true, true, true, false, false, true, true, true, false],
+    "id": "000018c8a5",
+    "ingredients": [{"text": "penne"}, {"text": "cheese sauce"}, {"text": "cheddar cheese"}, {"text": "gruyere cheese"}, {"text": "dried chipotle powder"}, {"text": "unsalted butter"}, {"text": "all - purpose flour"}, {"text": "milk"}, {"text": "14 ounces semihard cheese (page 23), grated (about 3 1/2 cups)"}, {"text": "2 ounces semisoft cheese (page 23), grated (1/2 cup)"}, {"text": "kosher salt"}, {"text": "dried chipotle powder"}, {"text": "garlic powder"}, {"text": "(makes about 4 cups)"}]
+  },
+  {
+    "valid": [true, true, true, true, true, true, true],
+    "id": "00007bfd16",
+    "ingredients": [{"text": "fresh rhubarb"}, {"text": "frozen rhubarb"}, {"text": "granulated sugar"}, {"text": "strawberry Jell - O gelatin dessert"}, {"text": "white cake mix"}, {"text": "water"}, {"text": "butter"}]
+  },
+  {
+    "valid": [true, true, true],
+    "id": "000095fc1d",
+    "ingredients": [{"text": "non - fat vanilla yogurt"}, {"text": "strawberries"}, {"text": "low - fat granola"}]
+  },
+  {
+    "valid": [true, true, true, true, true, true, true, true, true],
+    "id": "0000b1e2b5",
+    "ingredients": [{"text": "fennel seeds"}, {"text": "pork tenderloin"}, {"text": "fennel bulbs"}, {"text": "olive oil"}, {"text": "garlic cloves"}, {"text": "dry white wine"}, {"text": "reduced - sodium chicken broth"}, {"text": "unsalted butter"}, {"text": "fresh lemon juice"}
+    ]
+  }
+]
