@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.lucaandrei.picturerecipealignment.camera.CameraActivity;
+import com.example.lucaandrei.picturerecipealignment.result.ResultActivity;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -64,12 +65,17 @@ public class ImageSelectionMenuActivity extends AppCompatActivity {
                 final Bitmap selectedImage = BitmapFactory.decodeStream(imageStream);
 
                 ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
-                selectedImage.compress(Bitmap.CompressFormat.PNG, 100, byteArrayOutputStream);
-                byte[] byteArray = byteArrayOutputStream .toByteArray();
+                selectedImage.compress(Bitmap.CompressFormat.PNG, 1, byteArrayOutputStream);
+                byte[] byteArray = byteArrayOutputStream.toByteArray();
 
                 encoded = Base64.encodeToString(byteArray, Base64.DEFAULT);
 
-                System.out.println(encoded);
+                String[] ingredients = new String[]{"ingredient1"};
+
+                Intent myIntent = new Intent(this, ResultActivity.class);
+                myIntent.putExtra("image", byteArray);
+                myIntent.putExtra("ingredients", ingredients);
+                this.startActivity(myIntent);
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -82,9 +88,16 @@ public class ImageSelectionMenuActivity extends AppCompatActivity {
             selectedImage.compress(Bitmap.CompressFormat.PNG, 100, byteArrayOutputStream);
             byte[] byteArray = byteArrayOutputStream .toByteArray();
 
+            System.out.println(byteArray.length + "SIZE=====");
+
             encoded = Base64.encodeToString(byteArray, Base64.DEFAULT);
 
-            System.out.println(encoded);
+            String[] ingredients = new String[]{"ingredient1"};
+
+            Intent myIntent = new Intent(this, ResultActivity.class);
+            myIntent.putExtra("image", byteArray);
+            myIntent.putExtra("ingredients", ingredients);
+            this.startActivity(myIntent);
         }
 
         // TODO: Make request here with encoded.
