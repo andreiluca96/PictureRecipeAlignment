@@ -27,6 +27,7 @@ import com.squareup.okhttp.Response;
 
 import org.json.JSONObject;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Base64;
 
@@ -44,7 +45,7 @@ public class IngredientsFragment extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        getActivity().getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE|WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE);
+        getActivity().getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE | WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE);
 
         // get ingredients list
         final ListView list = this.getActivity().findViewById(R.id.ingredients_list);
@@ -96,8 +97,19 @@ public class IngredientsFragment extends Fragment {
                         .url(INGREDIENTS_URL)
                         .build();
 
-                Response response = client.newCall(request).execute();
-                JSONObject responseBody = new JSONObject(response.body().string());
+                final Response[] response = {null};
+
+                Thread thread = new Thread(() -> {
+                    try {
+                        response[0] = client.newCall(request).execute();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                });
+                thread.start();
+                thread.join();
+
+                JSONObject responseBody = new JSONObject(response[0].body().string());
 
                 String imageB64 = responseBody.getString("image");
 

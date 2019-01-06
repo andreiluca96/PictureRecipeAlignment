@@ -17,6 +17,7 @@ PHOTOS_FOLDER = './data/photos'
 IMAGE_FOLDER = 'D:/Master/IA/Data_1/imagini'
 train_data = []
 all_ingredients = []
+ingredients_one_hot_position = {}
 merged_model = 0
 
 
@@ -90,7 +91,7 @@ def setup_train_data():
                 all_ingredients.add(real_text)
         train_texts.append({'ingredients': current_ingredients_list, 'id': x['id']})
 
-    ingredients_one_hot_position = {}
+    global ingredients_one_hot_position
     for idx, ingr in enumerate(all_ingredients):
         ingredients_one_hot_position[ingr] = idx
 
@@ -133,7 +134,7 @@ if __name__ == "__main__":
     #     x=[[list(map(lambda x: x['ingredients'], train_data))[2]], [list(map(lambda x: preprocess(x['image'])[0], train_data))[2]]])
     #
 
-    merged_model.save(filepath="model.h5")
+    merged_model.save(filepath="model3.h5")
     test_image = load_image("test_image1.jpg")
     merged_model.predict(
         x=[list(map(lambda x: x['ingredients'], train_data)),
