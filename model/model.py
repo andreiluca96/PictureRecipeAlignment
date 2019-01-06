@@ -1,24 +1,22 @@
 import os
+
 import keras.backend as K
-
 from keras import initializers
-from keras.layers import Input
-from keras.layers import Dense
-from keras.layers import Conv2D
-from keras.layers import MaxPooling2D
-from keras.layers import AveragePooling2D
-from keras.layers import ZeroPadding2D
-from keras.layers import Flatten
-from keras.layers import Activation
-from keras.layers import add
-from keras.layers import BatchNormalization
-from keras.layers import GlobalAveragePooling2D
-from keras.layers import GlobalMaxPooling2D
-
-from keras.models import Model
 from keras.engine import Layer, InputSpec
 from keras.engine import get_source_inputs
-
+from keras.layers import Activation
+from keras.layers import AveragePooling2D
+from keras.layers import BatchNormalization
+from keras.layers import Conv2D
+from keras.layers import Dense
+from keras.layers import Flatten
+from keras.layers import GlobalAveragePooling2D
+from keras.layers import GlobalMaxPooling2D
+from keras.layers import Input
+from keras.layers import MaxPooling2D
+from keras.layers import ZeroPadding2D
+from keras.layers import add
+from keras.models import Model
 from keras.utils.data_utils import get_file
 from keras_applications.imagenet_utils import _obtain_input_shape
 

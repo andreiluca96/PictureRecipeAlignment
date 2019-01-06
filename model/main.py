@@ -1,7 +1,6 @@
 import json
 import os
 
-import keras
 import matplotlib.image
 import numpy as np
 from keras import Input, Model
@@ -15,7 +14,9 @@ from model import ResNet152
 ANNOTATED_FILE = './data/det_ingrs_truncated.json'
 MAPPING_FILE = './data/layer2_truncated.json'
 PHOTOS_FOLDER = './data/photos'
-IMAGE_FOLDER = 'D:\Master\IA\Data_1\imagini'
+IMAGE_FOLDER = 'D:/Master/IA/Data_1/imagini'
+train_data = []
+merged_model = 0
 
 
 def load_json_file(path):
@@ -71,10 +72,30 @@ def cosine_distance(vests):
 
 def cos_dist_output_shape(shapes):
     shape1, shape2 = shapes
-    return (shape1[0], 1)
+    return shape1[0], 1
 
 
-if __name__ == "__main__":
+def predict_image(img):
+    img = preprocess(img)
+    all_ingredients = list(map(lambda entry: entry['ingredients'], train_data))
+    img_repeated = [img for _ in range(len(all_ingredients))]
+    predictions = merged_model.predict([all_ingredients, img_repeated])
+    predictions = np.array(predictions)
+    return train_data[np.argmin(predictions)[0]]
+
+
+def predict_ingredients(ingrs):
+    all_ingredients = list(map(lambda entry: entry['ingredients'], train_data))
+    ingrs = list(filter(lambda x: x in all_ingredients, ingrs))
+
+    all_images = list(map(lambda entry: entry['image'], train_data))
+    ingrs_repeated = [ingrs for _ in range(len(all_images))]
+    predictions = merged_model.predict([ingrs_repeated, all_images])
+    predictions = np.array(predictions)
+    return train_data[np.argmin(predictions)[0]]
+
+
+def setup_train_data():
     train_tags = load_json_file(ANNOTATED_FILE)
     train_texts = []
     all_ingredients = set()
@@ -98,7 +119,6 @@ if __name__ == "__main__":
             {'id': mapping['id'], 'images': list(map(lambda x: x['id'], mapping['images']))})
 
     merged_dict = merge_lists(train_texts, ingredients_photo_mappings, 'id')
-    train_data = []
     for item in merged_dict:
         real_item = merged_dict[item]
         for image in real_item['images']:
@@ -106,9 +126,12 @@ if __name__ == "__main__":
                                'ingredients': to_one_hot(real_item['ingredients'], ingredients_one_hot_position),
                                'image': load_image(image)})
 
+
+if __name__ == "__main__":
+    setup_train_data()
     image_input, image_output = ResNet152(include_top=False, input_shape=(224, 224, 3), pooling='avg', weights=None)
     image_model = Dense(100, activation='relu', name='image_output')(image_output)
-    dense_model_input, dense_model_output = get_dense_model((len(all_ingredients),), 100)
+    dense_model_input, dense_model_output = get_dense_model((len(train_data),), 100)
 
     output = Lambda(cosine_distance, output_shape=cos_dist_output_shape)([dense_model_output, image_model])
 
@@ -126,4 +149,4 @@ if __name__ == "__main__":
     test_image = load_image("test_image1.jpg")
     merged_model.predict(
         x=[list(map(lambda x: x['ingredients'], train_data)),
-        [preprocess(test_image)[0] for i in range(5)]])
+           [preprocess(test_image)[0] for i in range(5)]])
