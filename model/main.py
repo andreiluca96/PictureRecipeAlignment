@@ -129,8 +129,7 @@ def setup_train_data():
                                'image': load_image(image)})
 
 
-if __name__ == "__main__":
-    setup_train_data()
+def setup_model():
     image_input, image_output = ResNet152(include_top=False, input_shape=(224, 224, 3), pooling='avg', weights=None)
     image_model = Dense(100, activation='relu', name='image_output')(image_output)
     dense_model_input, dense_model_output = get_dense_model((len(train_data),), 100)
@@ -140,6 +139,12 @@ if __name__ == "__main__":
     merged_model = Model(inputs=[dense_model_input, image_input], outputs=output)
     merged_model.compile(optimizer=rmsprop(0.0001), loss='mean_squared_error')
 
+    return merged_model
+
+
+if __name__ == "__main__":
+    setup_train_data()
+    merged_model = setup_model()
     merged_model.fit(
         [list(map(lambda x: x['ingredients'], train_data)), list(map(lambda x: preprocess(x['image'])[0], train_data))],
         np.zeros((len(train_data),)), epochs=10, validation_split=0.1)
@@ -148,6 +153,7 @@ if __name__ == "__main__":
     #     x=[[list(map(lambda x: x['ingredients'], train_data))[2]], [list(map(lambda x: preprocess(x['image'])[0], train_data))[2]]])
     #
 
+    merged_model.save(filepath="model.h5")
     test_image = load_image("test_image1.jpg")
     merged_model.predict(
         x=[list(map(lambda x: x['ingredients'], train_data)),
