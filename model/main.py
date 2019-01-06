@@ -76,26 +76,6 @@ def cos_dist_output_shape(shapes):
     return shape1[0], 1
 
 
-def predict_image(img):
-    img = preprocess(img)
-    img_repeated = [img for _ in range(len(all_ingredients))]
-    predictions = merged_model.predict([all_ingredients, img_repeated])
-    predictions = np.array(predictions)
-    predicted_ingredients_one_hot = train_data[np.argmin(predictions)[0]]['ingredients']
-    return [all_ingredients[x] for x in range(len(predicted_ingredients_one_hot))
-            if predicted_ingredients_one_hot[x] == 1]
-
-
-def predict_ingredients(ingrs):
-    ingrs = list(filter(lambda x: x in all_ingredients, ingrs))
-
-    all_images = list(map(lambda entry: entry['image'], train_data))
-    ingrs_repeated = [ingrs for _ in range(len(all_images))]
-    predictions = merged_model.predict([ingrs_repeated, all_images])
-    predictions = np.array(predictions)
-    return train_data[np.argmin(predictions)[0]]['image']
-
-
 def setup_train_data():
     train_tags = load_json_file(ANNOTATED_FILE)
     train_texts = []
@@ -132,7 +112,7 @@ def setup_train_data():
 def setup_model():
     image_input, image_output = ResNet152(include_top=False, input_shape=(224, 224, 3), pooling='avg', weights=None)
     image_model = Dense(100, activation='relu', name='image_output')(image_output)
-    dense_model_input, dense_model_output = get_dense_model((len(train_data),), 100)
+    dense_model_input, dense_model_output = get_dense_model((len(all_ingredients),), 100)
 
     output = Lambda(cosine_distance, output_shape=cos_dist_output_shape)([dense_model_output, image_model])
 
