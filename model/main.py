@@ -16,6 +16,7 @@ MAPPING_FILE = './data/layer2_truncated.json'
 PHOTOS_FOLDER = './data/photos'
 IMAGE_FOLDER = 'D:/Master/IA/Data_1/imagini'
 train_data = []
+all_ingredients = []
 merged_model = 0
 
 
@@ -77,27 +78,28 @@ def cos_dist_output_shape(shapes):
 
 def predict_image(img):
     img = preprocess(img)
-    all_ingredients = list(map(lambda entry: entry['ingredients'], train_data))
     img_repeated = [img for _ in range(len(all_ingredients))]
     predictions = merged_model.predict([all_ingredients, img_repeated])
     predictions = np.array(predictions)
-    return train_data[np.argmin(predictions)[0]]
+    predicted_ingredients_one_hot = train_data[np.argmin(predictions)[0]]['ingredients']
+    return [all_ingredients[x] for x in range(len(predicted_ingredients_one_hot))
+            if predicted_ingredients_one_hot[x] == 1]
 
 
 def predict_ingredients(ingrs):
-    all_ingredients = list(map(lambda entry: entry['ingredients'], train_data))
     ingrs = list(filter(lambda x: x in all_ingredients, ingrs))
 
     all_images = list(map(lambda entry: entry['image'], train_data))
     ingrs_repeated = [ingrs for _ in range(len(all_images))]
     predictions = merged_model.predict([ingrs_repeated, all_images])
     predictions = np.array(predictions)
-    return train_data[np.argmin(predictions)[0]]
+    return train_data[np.argmin(predictions)[0]]['image']
 
 
 def setup_train_data():
     train_tags = load_json_file(ANNOTATED_FILE)
     train_texts = []
+    global all_ingredients
     all_ingredients = set()
     for x in train_tags:
         current_ingredients_list = []
