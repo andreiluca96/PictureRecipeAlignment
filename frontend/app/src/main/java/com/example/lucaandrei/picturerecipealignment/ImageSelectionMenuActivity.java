@@ -2,16 +2,16 @@ package com.example.lucaandrei.picturerecipealignment;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Base64;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
 
 import com.example.lucaandrei.picturerecipealignment.camera.CameraActivity;
-
-import org.apache.commons.io.IOUtils;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -56,33 +56,38 @@ public class ImageSelectionMenuActivity extends AppCompatActivity {
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data)
     {
+        String encoded;
         if (requestCode == PICK_IMAGE && resultCode == RESULT_OK) {
             try {
-                InputStream inputStream = getApplicationContext().getContentResolver().openInputStream(data.getData());
-                processPicture(IOUtils.toByteArray(inputStream));
-                //TODO: request with the selected picture
+                final Uri imageUri = data.getData();
+                final InputStream imageStream = getContentResolver().openInputStream(imageUri);
+                final Bitmap selectedImage = BitmapFactory.decodeStream(imageStream);
+
+                ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+                selectedImage.compress(Bitmap.CompressFormat.PNG, 100, byteArrayOutputStream);
+                byte[] byteArray = byteArrayOutputStream .toByteArray();
+
+                encoded = Base64.encodeToString(byteArray, Base64.DEFAULT);
+
+                System.out.println(encoded);
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
 
         if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
-            Bundle extras = data.getExtras();
-            Bitmap imageBitmap = (Bitmap) extras.get("data");
+            final Bitmap selectedImage = (Bitmap) data.getExtras().get("data");
 
-            ByteArrayOutputStream stream = new ByteArrayOutputStream();
-            imageBitmap.compress(Bitmap.CompressFormat.PNG, 100, stream);
-            processPicture(stream.toByteArray());
-            imageBitmap.recycle();
+            ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+            selectedImage.compress(Bitmap.CompressFormat.PNG, 100, byteArrayOutputStream);
+            byte[] byteArray = byteArrayOutputStream .toByteArray();
 
-            ImageView mImageView = new ImageView(getApplicationContext());
-            mImageView.setImageBitmap(imageBitmap);
-            //TODO: get full size picture and request
+            encoded = Base64.encodeToString(byteArray, Base64.DEFAULT);
+
+            System.out.println(encoded);
         }
-    }
 
-    private void processPicture(byte[] picture) {
-        //TODO: store the picture somewhere
+        // TODO: Make request here with encoded.
     }
 
     public void startCameraActivity() {

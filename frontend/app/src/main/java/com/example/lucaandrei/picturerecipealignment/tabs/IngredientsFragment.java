@@ -31,7 +31,7 @@ public class IngredientsFragment extends Fragment {
         getActivity().getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE|WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE);
 
         // get ingredients list
-        final ListView list = (ListView)this.getActivity().findViewById(R.id.ingredients_list);
+        final ListView list = this.getActivity().findViewById(R.id.ingredients_list);
 
         final ArrayList<String> ingredients = new ArrayList<String>();
         final ArrayAdapter<String> itemsAdapter =
@@ -63,11 +63,12 @@ public class IngredientsFragment extends Fragment {
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //TODO: request with ingredients array
+                for (String ingredient : ingredients) {
+                    System.out.println(ingredient);
+                }
 
                 // empty ingredients list
                 ingredients.clear();
-
                 itemsAdapter.notifyDataSetChanged();
             }
         });
