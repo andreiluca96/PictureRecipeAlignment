@@ -13,6 +13,15 @@ import android.widget.Button;
 
 import com.example.lucaandrei.picturerecipealignment.camera.CameraActivity;
 import com.example.lucaandrei.picturerecipealignment.result.ResultActivity;
+import com.squareup.okhttp.MediaType;
+import com.squareup.okhttp.OkHttpClient;
+import com.squareup.okhttp.Request;
+import com.squareup.okhttp.RequestBody;
+import com.squareup.okhttp.Response;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -22,6 +31,9 @@ public class ImageSelectionMenuActivity extends AppCompatActivity {
 
     public static final int PICK_IMAGE = 1;
     static final int REQUEST_IMAGE_CAPTURE = 2;
+
+    private static final String IMG_URL = "http://localhost:5000/img";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,8 +67,7 @@ public class ImageSelectionMenuActivity extends AppCompatActivity {
     }
 
     @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data)
-    {
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
         String encoded;
         if (requestCode == PICK_IMAGE && resultCode == RESULT_OK) {
             try {
@@ -65,45 +76,89 @@ public class ImageSelectionMenuActivity extends AppCompatActivity {
                 final Bitmap selectedImage = BitmapFactory.decodeStream(imageStream);
 
                 ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
-                selectedImage.compress(Bitmap.CompressFormat.PNG, 1, byteArrayOutputStream);
+                selectedImage.compress(Bitmap.CompressFormat.PNG, 100, byteArrayOutputStream);
                 byte[] byteArray = byteArrayOutputStream.toByteArray();
 
                 encoded = Base64.encodeToString(byteArray, Base64.DEFAULT);
 
-                String[] ingredients = new String[]{"ingredient1"};
+                String ingredientsJson =
+                        "{" +
+                                "\"img\": \"" + encoded + "\"" +
+                        "}";
+
+                RequestBody body = RequestBody.create(MediaType.parse("application/json; charset=utf-8"), ingredientsJson);
+
+                OkHttpClient client = new OkHttpClient();
+                Request request = new Request.Builder()
+                        .post(body)
+                        .url(IMG_URL)
+                        .build();
+
+                Response response = client.newCall(request).execute();
+                JSONObject responseBody = new JSONObject(response.body().string());
+
+                JSONArray ingredientList = responseBody.getJSONArray("ingredients");
+                String[] ingredients = new String[ingredientList.length()];
+
+                for (int i = 0; i < ingredientList.length(); i++) {
+                    ingredients[i] = ingredientList.getString(i);
+                }
+
 
                 Intent myIntent = new Intent(this, ResultActivity.class);
                 myIntent.putExtra("image", byteArray);
                 myIntent.putExtra("ingredients", ingredients);
                 this.startActivity(myIntent);
-            } catch (IOException e) {
+            } catch (IOException | JSONException e) {
                 e.printStackTrace();
             }
         }
 
         if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
-            final Bitmap selectedImage = (Bitmap) data.getExtras().get("data");
+            try {
+                final Bitmap selectedImage = (Bitmap) data.getExtras().get("data");
 
-            ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
-            selectedImage.compress(Bitmap.CompressFormat.PNG, 100, byteArrayOutputStream);
-            byte[] byteArray = byteArrayOutputStream .toByteArray();
+                ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+                selectedImage.compress(Bitmap.CompressFormat.PNG, 100, byteArrayOutputStream);
+                byte[] byteArray = byteArrayOutputStream.toByteArray();
 
-            System.out.println(byteArray.length + "SIZE=====");
+                encoded = Base64.encodeToString(byteArray, Base64.DEFAULT);
 
-            encoded = Base64.encodeToString(byteArray, Base64.DEFAULT);
+                String ingredientsJson =
+                        "{" +
+                                "\"img\": \"" + encoded + "\"" +
+                                "}";
 
-            String[] ingredients = new String[]{"ingredient1"};
+                RequestBody body = RequestBody.create(MediaType.parse("application/json; charset=utf-8"), ingredientsJson);
 
-            Intent myIntent = new Intent(this, ResultActivity.class);
-            myIntent.putExtra("image", byteArray);
-            myIntent.putExtra("ingredients", ingredients);
-            this.startActivity(myIntent);
+                OkHttpClient client = new OkHttpClient();
+                Request request = new Request.Builder()
+                        .post(body)
+                        .url(IMG_URL)
+                        .build();
+
+                Response response = client.newCall(request).execute();
+                JSONObject responseBody = new JSONObject(response.body().string());
+
+                JSONArray ingredientList = responseBody.getJSONArray("ingredients");
+                String[] ingredients = new String[ingredientList.length()];
+
+                for (int i = 0; i < ingredientList.length(); i++) {
+                    ingredients[i] = ingredientList.getString(i);
+                }
+
+
+                Intent myIntent = new Intent(this, ResultActivity.class);
+                myIntent.putExtra("image", byteArray);
+                myIntent.putExtra("ingredients", ingredients);
+                this.startActivity(myIntent);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
-
-        // TODO: Make request here with encoded.
     }
 
     public void startCameraActivity() {
-        startActivity(new Intent(this,CameraActivity.class));
+        startActivity(new Intent(this, CameraActivity.class));
     }
 }

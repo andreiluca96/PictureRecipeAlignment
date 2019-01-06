@@ -1,8 +1,12 @@
 package com.example.lucaandrei.picturerecipealignment.tabs;
 
+import android.annotation.TargetApi;
 import android.app.Activity;
+import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.annotation.RequiresApi;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,16 +18,28 @@ import android.widget.EditText;
 import android.widget.ListView;
 
 import com.example.lucaandrei.picturerecipealignment.R;
+import com.example.lucaandrei.picturerecipealignment.result.ResultActivity;
+import com.squareup.okhttp.MediaType;
+import com.squareup.okhttp.OkHttpClient;
+import com.squareup.okhttp.Request;
+import com.squareup.okhttp.RequestBody;
+import com.squareup.okhttp.Response;
+
+import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.Base64;
 
 public class IngredientsFragment extends Fragment {
+    private static final String INGREDIENTS_URL = "http://localhost:5000/ingredients";
 
     public IngredientsFragment() {
         // Required empty public constructor
 
     }
 
+    @TargetApi(Build.VERSION_CODES.O)
+    @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
@@ -60,16 +76,40 @@ public class IngredientsFragment extends Fragment {
         });
 
         Button submit = this.getActivity().findViewById(R.id.submit_ingredients);
-        submit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                for (String ingredient : ingredients) {
-                    System.out.println(ingredient);
-                }
+        submit.setOnClickListener(view -> {
+            try {
+                String ingredientsJsonList = ingredients
+                        .stream()
+                        .reduce((s1, s2) -> s1 + "," + s2)
+                        .orElse("");
 
+                String ingredientsJson =
+                        "{" +
+                                "\"ingredients\": [" + ingredientsJsonList + "]" +
+                                "}";
+
+                RequestBody body = RequestBody.create(MediaType.parse("application/json; charset=utf-8"), ingredientsJson);
+
+                OkHttpClient client = new OkHttpClient();
+                Request request = new Request.Builder()
+                        .post(body)
+                        .url(INGREDIENTS_URL)
+                        .build();
+
+                Response response = client.newCall(request).execute();
+                JSONObject responseBody = new JSONObject(response.body().string());
+
+                String imageB64 = responseBody.getString("image");
+
+
+                Intent myIntent = new Intent(act, ResultActivity.class);
+                myIntent.putExtra("image", Base64.getDecoder().decode(imageB64));
+                myIntent.putExtra("ingredients", ingredients);
+                act.startActivity(myIntent);
                 // empty ingredients list
-                ingredients.clear();
                 itemsAdapter.notifyDataSetChanged();
+            } catch (Exception e) {
+                e.printStackTrace();
             }
         });
     }
