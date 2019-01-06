@@ -43,12 +43,12 @@ def predict_ingredients(ingredients):
 
 @app.route('/image', methods=['POST'])
 def classify_image():
-    return jsonify(predict_image(preprocess_image(request.json['img'])))
+    return jsonify(ingredients=predict_image(preprocess_image(request.json['img'])))
 
 
 @app.route('/ingredients', methods=['POST'])
 def classify_ingredients():
-    return jsonify(base64.b64encode(predict_ingredients(request.json['ingredients'])))
+    return jsonify(image=base64.b64encode(predict_ingredients(request.json['ingredients'])))
 
 
 if __name__ == '__main__':
