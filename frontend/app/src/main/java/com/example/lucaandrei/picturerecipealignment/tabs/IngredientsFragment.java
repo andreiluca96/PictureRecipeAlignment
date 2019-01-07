@@ -81,7 +81,7 @@ public class IngredientsFragment extends Fragment {
             try {
                 String ingredientsJsonList = ingredients
                         .stream()
-                        .reduce((s1, s2) -> s1 + "," + s2)
+                        .reduce((s1, s2) -> "\"" + s1 + "\",\"" + s2 + "\"")
                         .orElse("");
 
                 String ingredientsJson =
@@ -109,13 +109,10 @@ public class IngredientsFragment extends Fragment {
                 thread.start();
                 thread.join();
 
-                JSONObject responseBody = new JSONObject(response[0].body().string());
-
-                String imageB64 = responseBody.getString("image");
-
+                byte[] bodyBytes = response[0].body().bytes();
 
                 Intent myIntent = new Intent(act, ResultActivity.class);
-                myIntent.putExtra("image", Base64.getDecoder().decode(imageB64));
+                myIntent.putExtra("image", bodyBytes);
                 myIntent.putExtra("ingredients", ingredients);
                 act.startActivity(myIntent);
                 // empty ingredients list

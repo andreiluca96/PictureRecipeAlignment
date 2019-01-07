@@ -2,6 +2,7 @@ import base64
 
 import keras
 import numpy as np
+import skimage.io
 import tensorflow
 from flask import Flask, request, jsonify
 from flask_cors import CORS
@@ -39,12 +40,16 @@ def preprocess_image(img):
 def predict_image(img):
     with graph.as_default():
         main.setup_train_data()
-        img = main.preprocess(img)
-        img_repeated = [img for _ in range(len(main.all_ingredients))]
-        predictions = model.predict([main.all_ingredients, img_repeated])
+        all_ingredient_combinations = list(map(lambda entry: entry['ingredients'], main.train_data))
+        img = main.preprocess(skimage.io.imread(img, plugin='imageio'))
+        img_repeated = [img for _ in range(len(all_ingredient_combinations))]
+        predictions = model.predict([np.array(all_ingredient_combinations), np.squeeze(np.array(img_repeated))])
         predictions = np.array(predictions)
-        predicted_ingredients_one_hot = main.train_data[np.argmin(predictions)[0]]['ingredients']
-        predicted_ingredients = [main.all_ingredients[x] for x in range(len(predicted_ingredients_one_hot)) if
+        try:
+            predicted_ingredients_one_hot = main.train_data[np.argmin(predictions)][0]['ingredients']
+        except:
+            predicted_ingredients_one_hot = main.train_data[np.argmin(predictions)]['ingredients']
+        predicted_ingredients = [list(main.all_ingredients)[x] for x in range(len(predicted_ingredients_one_hot)) if
                                  predicted_ingredients_one_hot[x] == 1]
         return predicted_ingredients
 
@@ -56,7 +61,7 @@ def predict_ingredients(ingredients):
         all_images = list(map(lambda entry: entry['image'], main.train_data))
         ingredients_repeated = [main.to_one_hot(known_ingredients, main.ingredients_one_hot_position) for _ in
                                 range(len(all_images))]
-        predictions = np.array(model.predict([ingredients_repeated, [main.preprocess(imng)[0] for imng in all_images]]))
+        predictions = np.array(model.predict([np.array(ingredients_repeated), np.array([main.preprocess(imng)[0] for imng in all_images])]))
         predicted_image = main.train_data[np.argmin(predictions)]['image']
         return predicted_image
 
@@ -68,7 +73,7 @@ def classify_image():
 
 @app.route('/ingredients', methods=['POST'])
 def classify_ingredients():
-    return jsonify(image=base64.b64encode(predict_ingredients(request.json['ingredients'])).decode('ascii'))
+    return jsonify(image=base64.b64encode(predict_ingredients(request.json['ingredients'])).decode('ascii')+"")
 
 
 if __name__ == '__main__':

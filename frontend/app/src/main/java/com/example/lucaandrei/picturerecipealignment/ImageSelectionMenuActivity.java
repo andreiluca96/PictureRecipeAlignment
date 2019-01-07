@@ -32,7 +32,7 @@ public class ImageSelectionMenuActivity extends AppCompatActivity {
     public static final int PICK_IMAGE = 1;
     static final int REQUEST_IMAGE_CAPTURE = 2;
 
-    private static final String IMG_URL = "http://localhost:5000/img";
+    private static final String IMG_URL = "http://10.0.2.2:5000/image";
 
 
     @Override
@@ -81,12 +81,10 @@ public class ImageSelectionMenuActivity extends AppCompatActivity {
 
                 encoded = Base64.encodeToString(byteArray, Base64.DEFAULT);
 
-                String ingredientsJson =
-                        "{" +
-                                "\"img\": \"" + encoded + "\"" +
-                        "}";
+                JSONObject requestBody = new JSONObject();
+                requestBody.put("img", encoded);
 
-                RequestBody body = RequestBody.create(MediaType.parse("application/json; charset=utf-8"), ingredientsJson);
+                RequestBody body = RequestBody.create(MediaType.parse("application/json; charset=utf-8"), requestBody.toString());
 
                 OkHttpClient client = new OkHttpClient();
                 Request request = new Request.Builder()
