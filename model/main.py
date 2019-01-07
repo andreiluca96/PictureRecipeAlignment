@@ -127,8 +127,8 @@ if __name__ == "__main__":
     setup_train_data()
     merged_model = setup_model()
     merged_model.fit(
-        [list(map(lambda x: x['ingredients'], train_data)), list(map(lambda x: preprocess(x['image'])[0], train_data))],
-        np.zeros((len(train_data),)), epochs=10, validation_split=0.1)
+        [np.array(list(map(lambda x: x['ingredients'], train_data))), np.array(list(map(lambda x: preprocess(x['image'])[0], train_data)))],
+        np.zeros((len(train_data))), epochs=10, validation_split=0.1)
 
     # merged_model.predict(
     #     x=[[list(map(lambda x: x['ingredients'], train_data))[2]], [list(map(lambda x: preprocess(x['image'])[0], train_data))[2]]])
@@ -137,5 +137,5 @@ if __name__ == "__main__":
     merged_model.save(filepath="model3.h5")
     test_image = load_image("test_image1.jpg")
     merged_model.predict(
-        x=[list(map(lambda x: x['ingredients'], train_data)),
-           [preprocess(test_image)[0] for i in range(5)]])
+        x=[np.array(list(map(lambda x: x['ingredients'], train_data))),
+           np.array([preprocess(test_image)[0] for i in range(5)])])

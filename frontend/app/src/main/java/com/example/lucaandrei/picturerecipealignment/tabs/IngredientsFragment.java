@@ -32,7 +32,7 @@ import java.util.ArrayList;
 import java.util.Base64;
 
 public class IngredientsFragment extends Fragment {
-    private static final String INGREDIENTS_URL = "http://localhost:5000/ingredients";
+    private static final String INGREDIENTS_URL = "http://10.0.2.2:5000/ingredients";
 
     public IngredientsFragment() {
         // Required empty public constructor
