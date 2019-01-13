@@ -1,0 +1,4178 @@
+[
+    {
+        "valid": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "id": "00003a70b1",
+        "ingredients": [
+            {
+                "text": "milk"
+            },
+            {
+                "text": "water"
+            },
+            {
+                "text": "butter"
+            },
+            {
+                "text": "mashed potatoes"
+            },
+            {
+                "text": "whole kernel corn"
+            },
+            {
+                "text": "cheddar cheese"
+            },
+            {
+                "text": "French - fried onions"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "id": "00007bfd16",
+        "ingredients": [
+            {
+                "text": "fresh rhubarb"
+            },
+            {
+                "text": "frozen rhubarb"
+            },
+            {
+                "text": "granulated sugar"
+            },
+            {
+                "text": "strawberry Jell - O gelatin dessert"
+            },
+            {
+                "text": "white cake mix"
+            },
+            {
+                "text": "water"
+            },
+            {
+                "text": "butter"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true
+        ],
+        "id": "000095fc1d",
+        "ingredients": [
+            {
+                "text": "non - fat vanilla yogurt"
+            },
+            {
+                "text": "strawberries"
+            },
+            {
+                "text": "low - fat granola"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "id": "0000b1e2b5",
+        "ingredients": [
+            {
+                "text": "fennel seeds"
+            },
+            {
+                "text": "pork tenderloin"
+            },
+            {
+                "text": "fennel bulbs"
+            },
+            {
+                "text": "olive oil"
+            },
+            {
+                "text": "garlic cloves"
+            },
+            {
+                "text": "dry white wine"
+            },
+            {
+                "text": "reduced - sodium chicken broth"
+            },
+            {
+                "text": "unsalted butter"
+            },
+            {
+                "text": "fresh lemon juice"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "id": "0000c79afb",
+        "ingredients": [
+            {
+                "text": "rose wine"
+            },
+            {
+                "text": "brandy"
+            },
+            {
+                "text": "orange liqueur"
+            },
+            {
+                "text": "white cranberry juice"
+            },
+            {
+                "text": "orange"
+            },
+            {
+                "text": "lemon"
+            },
+            {
+                "text": "Sprite"
+            },
+            {
+                "text": "ice cubes"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "id": "00010c7867",
+        "ingredients": [
+            {
+                "text": "ground beef"
+            },
+            {
+                "text": "oats"
+            },
+            {
+                "text": "tomato juice"
+            },
+            {
+                "text": "egg"
+            },
+            {
+                "text": "salt"
+            },
+            {
+                "text": "pepper"
+            },
+            {
+                "text": "chili powder"
+            },
+            {
+                "text": "onions"
+            },
+            {
+                "text": "butter"
+            },
+            {
+                "text": "flour"
+            },
+            {
+                "text": "milk"
+            },
+            {
+                "text": "cheddar cheese"
+            },
+            {
+                "text": "Mexican - style corn"
+            },
+            {
+                "text": "green peppers"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "id": "00010d44c7",
+        "ingredients": [
+            {
+                "text": "frozen chopped broccoli"
+            },
+            {
+                "text": "cooked rice"
+            },
+            {
+                "text": "shredded cheddar cheese"
+            },
+            {
+                "text": "shredded cheddar cheese"
+            },
+            {
+                "text": "eggs"
+            },
+            {
+                "text": "butter"
+            },
+            {
+                "text": "milk"
+            },
+            {
+                "text": "onion"
+            },
+            {
+                "text": "garlic powder"
+            },
+            {
+                "text": "basil"
+            },
+            {
+                "text": "oregano"
+            },
+            {
+                "text": "salt and pepper"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "id": "00016355e6",
+        "ingredients": [
+            {
+                "text": "vanilla wafer cookie"
+            },
+            {
+                "text": "bananas"
+            },
+            {
+                "text": "coconut milk"
+            },
+            {
+                "text": "fat - free half - and - half"
+            },
+            {
+                "text": "vanilla extract"
+            },
+            {
+                "text": "stevia"
+            },
+            {
+                "text": "ice cubes"
+            },
+            {
+                "text": "whipped cream"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            false,
+            true
+        ],
+        "id": "00018371f2",
+        "ingredients": [
+            {
+                "text": "juice"
+            },
+            {
+                "text": "1 box Certo Pectin Crystals"
+            },
+            {
+                "text": "granulated sugar"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            false,
+            true,
+            true,
+            true,
+            true
+        ],
+        "id": "000238353f",
+        "ingredients": [
+            {
+                "text": "pork sausage"
+            },
+            {
+                "text": "onion"
+            },
+            {
+                "text": "garlic clove"
+            },
+            {
+                "text": "thyme"
+            },
+            {
+                "text": "marmalade"
+            },
+            {
+                "text": "1 pack of ready rolled puff pastry (375g)"
+            },
+            {
+                "text": "egg"
+            },
+            {
+                "text": "poppy seeds"
+            },
+            {
+                "text": "salt and pepper"
+            },
+            {
+                "text": "oil"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            false
+        ],
+        "id": "0002a82634",
+        "ingredients": [
+            {
+                "text": "popcorn"
+            },
+            {
+                "text": "1/4 cup PLANTERS NUTrition Digestive Health Mix"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "id": "00034ad6cc",
+        "ingredients": [
+            {
+                "text": "fettuccine pasta"
+            },
+            {
+                "text": "butter"
+            },
+            {
+                "text": "garlic cloves"
+            },
+            {
+                "text": "heavy cream"
+            },
+            {
+                "text": "egg yolk"
+            },
+            {
+                "text": "parmesan cheese"
+            },
+            {
+                "text": "dried parsley"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "id": "00034cf3f3",
+        "ingredients": [
+            {
+                "text": "cornstarch"
+            },
+            {
+                "text": "cold water"
+            },
+            {
+                "text": "boiling water"
+            },
+            {
+                "text": "lemon juice"
+            },
+            {
+                "text": "egg whites"
+            },
+            {
+                "text": "sugar"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            false,
+            true,
+            true
+        ],
+        "id": "0003d5b120",
+        "ingredients": [
+            {
+                "text": "linguine"
+            },
+            {
+                "text": "red bell pepper"
+            },
+            {
+                "text": "balsamic vinegar"
+            },
+            {
+                "text": "garlic cloves"
+            },
+            {
+                "text": "salt"
+            },
+            {
+                "text": "fresh coarse ground black pepper"
+            },
+            {
+                "text": "extra virgin olive oil"
+            },
+            {
+                "text": "fresh basil leaves"
+            },
+            {
+                "text": "2 cups Shredded, Cooked Chicken"
+            },
+            {
+                "text": "fresh mozzarella balls"
+            },
+            {
+                "text": "goat cheese"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "id": "0004073370",
+        "ingredients": [
+            {
+                "text": "all - purpose flour"
+            },
+            {
+                "text": "white sugar"
+            },
+            {
+                "text": "salt"
+            },
+            {
+                "text": "vegetable oil"
+            },
+            {
+                "text": "milk"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "id": "00043c736b",
+        "ingredients": [
+            {
+                "text": "chocolate cake mix"
+            },
+            {
+                "text": "Oreo cookies"
+            },
+            {
+                "text": "instant vanilla pudding"
+            },
+            {
+                "text": "milk"
+            },
+            {
+                "text": "icing sugar"
+            },
+            {
+                "text": "Cool Whip Topping"
+            },
+            {
+                "text": "semi - sweet chocolate chips"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "id": "00047059be",
+        "ingredients": [
+            {
+                "text": "butternut squash"
+            },
+            {
+                "text": "onion"
+            },
+            {
+                "text": "olive oil"
+            },
+            {
+                "text": "apple"
+            },
+            {
+                "text": "chicken broth"
+            },
+            {
+                "text": "half - and - half"
+            },
+            {
+                "text": "parsley"
+            },
+            {
+                "text": "thyme"
+            },
+            {
+                "text": "croutons"
+            },
+            {
+                "text": "sour cream"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "id": "0004c091a0",
+        "ingredients": [
+            {
+                "text": "whole wheat flour"
+            },
+            {
+                "text": "baking powder"
+            },
+            {
+                "text": "extra virgin olive oil"
+            },
+            {
+                "text": "eggs"
+            },
+            {
+                "text": "skim milk"
+            },
+            {
+                "text": "salt"
+            },
+            {
+                "text": "cinnamon"
+            },
+            {
+                "text": "nutmeg"
+            },
+            {
+                "text": "ground cloves"
+            },
+            {
+                "text": "ginger"
+            },
+            {
+                "text": "vanilla"
+            },
+            {
+                "text": "flax seeds"
+            },
+            {
+                "text": "honey"
+            },
+            {
+                "text": "blueberries"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "id": "0004c7c040",
+        "ingredients": [
+            {
+                "text": "heavy cream"
+            },
+            {
+                "text": "lemon curd"
+            },
+            {
+                "text": "cream cheese"
+            },
+            {
+                "text": "phyllo dough"
+            },
+            {
+                "text": "fruit slices"
+            }
+        ]
+    },
+    {
+        "valid": [
+            false,
+            true,
+            true,
+            true,
+            true
+        ],
+        "id": "0004d8bd26",
+        "ingredients": [
+            {
+                "text": "4 large baking potatoes (2 lb./900 g) Safeway 2 pkg For $5.00 thru 02/09"
+            },
+            {
+                "text": "sour cream"
+            },
+            {
+                "text": "barbecue sauce"
+            },
+            {
+                "text": "green onions"
+            },
+            {
+                "text": "French - fried onions"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "id": "00050108a0",
+        "ingredients": [
+            {
+                "text": "all - purpose flour"
+            },
+            {
+                "text": "sugar"
+            },
+            {
+                "text": "baking powder"
+            },
+            {
+                "text": "unsalted butter"
+            },
+            {
+                "text": "egg"
+            },
+            {
+                "text": "ricotta cheese"
+            },
+            {
+                "text": "vanilla"
+            },
+            {
+                "text": "cinnamon"
+            },
+            {
+                "text": "peaches"
+            },
+            {
+                "text": "turbinado sugar"
+            },
+            {
+                "text": "confectioners' sugar"
+            },
+            {
+                "text": "milk"
+            },
+            {
+                "text": "cinnamon"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "id": "000507ca6b",
+        "ingredients": [
+            {
+                "text": "all - purpose flour"
+            },
+            {
+                "text": "walnuts"
+            },
+            {
+                "text": "brown sugar"
+            },
+            {
+                "text": "butter"
+            },
+            {
+                "text": "strawberries"
+            },
+            {
+                "text": "white sugar"
+            },
+            {
+                "text": "lemon juice"
+            },
+            {
+                "text": "frozen whipped topping"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "id": "00054e238b",
+        "ingredients": [
+            {
+                "text": "old fashioned oats"
+            },
+            {
+                "text": "flour"
+            },
+            {
+                "text": "brown sugar"
+            },
+            {
+                "text": "cinnamon"
+            },
+            {
+                "text": "baking soda"
+            },
+            {
+                "text": "salt"
+            },
+            {
+                "text": "orange juice"
+            },
+            {
+                "text": "vegetable oil"
+            },
+            {
+                "text": "egg"
+            },
+            {
+                "text": "vanilla"
+            },
+            {
+                "text": "dried mixed fruit"
+            },
+            {
+                "text": "old fashioned oats"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            false,
+            true,
+            true
+        ],
+        "id": "000590475e",
+        "ingredients": [
+            {
+                "text": "boneless beef top sirloin steaks"
+            },
+            {
+                "text": "1/4 cup A.1. Original Sauce, divided"
+            },
+            {
+                "text": "barbecue sauce"
+            },
+            {
+                "text": "Grey Poupon Dijon Mustard"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "id": "000590db74",
+        "ingredients": [
+            {
+                "text": "potatoes"
+            },
+            {
+                "text": "onions"
+            },
+            {
+                "text": "eggs"
+            },
+            {
+                "text": "salt"
+            },
+            {
+                "text": "oil"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "id": "00059477e2",
+        "ingredients": [
+            {
+                "text": "frozen chopped spinach"
+            },
+            {
+                "text": "dry breadcrumbs"
+            },
+            {
+                "text": "onion"
+            },
+            {
+                "text": "eggs"
+            },
+            {
+                "text": "romano cheese"
+            },
+            {
+                "text": "dried oregano"
+            },
+            {
+                "text": "garlic powder"
+            },
+            {
+                "text": "salt"
+            },
+            {
+                "text": "all purpose Greek seasoning"
+            },
+            {
+                "text": "ground lamb"
+            },
+            {
+                "text": "tzatziki"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "id": "00059b093b",
+        "ingredients": [
+            {
+                "text": "chicken wings"
+            },
+            {
+                "text": "salt"
+            },
+            {
+                "text": "pepper"
+            },
+            {
+                "text": "oil"
+            },
+            {
+                "text": "butter"
+            },
+            {
+                "text": "hot sauce"
+            },
+            {
+                "text": "honey"
+            },
+            {
+                "text": "rice wine"
+            },
+            {
+                "text": "soy sauce"
+            },
+            {
+                "text": "hoisin sauce"
+            },
+            {
+                "text": "salt"
+            },
+            {
+                "text": "cilantro"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "id": "0005fc89f7",
+        "ingredients": [
+            {
+                "text": "shrimp"
+            },
+            {
+                "text": "green onions"
+            },
+            {
+                "text": "celery"
+            },
+            {
+                "text": "capers"
+            },
+            {
+                "text": "black olives"
+            },
+            {
+                "text": "oil - and - vinegar dressing"
+            },
+            {
+                "text": "mayonnaise"
+            },
+            {
+                "text": "celery seeds"
+            },
+            {
+                "text": "lemon juice"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "id": "0006354bc3",
+        "ingredients": [
+            {
+                "text": "creamy peanut butter"
+            },
+            {
+                "text": "Crisco shortening"
+            },
+            {
+                "text": "light brown sugar"
+            },
+            {
+                "text": "milk"
+            },
+            {
+                "text": "vanilla"
+            },
+            {
+                "text": "egg"
+            },
+            {
+                "text": "flour"
+            },
+            {
+                "text": "salt"
+            },
+            {
+                "text": "baking soda"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "id": "00063fb14c",
+        "ingredients": [
+            {
+                "text": "chicken sausage"
+            },
+            {
+                "text": "garlic clove"
+            },
+            {
+                "text": "onion"
+            },
+            {
+                "text": "green pepper"
+            },
+            {
+                "text": "carrots"
+            },
+            {
+                "text": "soy sauce"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true,
+            true
+        ],
+        "id": "0006c5e4eb",
+        "ingredients": [
+            {
+                "text": "watermelon"
+            },
+            {
+                "text": "lime - flavored seltzer water"
+            },
+            {
+                "text": "Splenda sugar substitute"
+            },
+            {
+                "text": "lemons"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "id": "0006ef8deb",
+        "ingredients": [
+            {
+                "text": "graham cracker crumb crust"
+            },
+            {
+                "text": "seedless raspberry preserves"
+            },
+            {
+                "text": "Philadelphia Cream Cheese"
+            },
+            {
+                "text": "creamy peanut butter"
+            },
+            {
+                "text": "brown sugar"
+            },
+            {
+                "text": "Cool Whip Topping"
+            },
+            {
+                "text": "dry roasted peanuts"
+            },
+            {
+                "text": "raspberries"
+            }
+        ]
+    },
+    {
+        "valid": [
+            false,
+            true,
+            false,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "id": "000731b459",
+        "ingredients": [
+            {
+                "text": "6 cups small cauliflower florets Safeway 1 lb For $1.99 thru 02/09"
+            },
+            {
+                "text": "butter"
+            },
+            {
+                "text": "1 onion, chopped King Sooper's 1 lb For $0.99 thru 02/09"
+            },
+            {
+                "text": "flour"
+            },
+            {
+                "text": "dry mustard"
+            },
+            {
+                "text": "milk"
+            },
+            {
+                "text": "KRAFT Shredded Triple Cheddar Cheese with a Touch of PHILADELPHIA"
+            },
+            {
+                "text": "Kraft Grated Parmesan Cheese"
+            },
+            {
+                "text": "panko breadcrumbs"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true,
+            true
+        ],
+        "id": "00073a6b36",
+        "ingredients": [
+            {
+                "text": "process American cheese"
+            },
+            {
+                "text": "milk"
+            },
+            {
+                "text": "onion salt"
+            },
+            {
+                "text": "red pepper sauce"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true
+        ],
+        "id": "00077e688b",
+        "ingredients": [
+            {
+                "text": "breakfast sausage"
+            },
+            {
+                "text": "flour tortilla"
+            },
+            {
+                "text": "cream cheese"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "id": "0007a00526",
+        "ingredients": [
+            {
+                "text": "unsweetened chocolate"
+            },
+            {
+                "text": "unsalted butter"
+            },
+            {
+                "text": "sugar"
+            },
+            {
+                "text": "dark brown sugar"
+            },
+            {
+                "text": "all - purpose flour"
+            },
+            {
+                "text": "unsweetened cocoa powder"
+            },
+            {
+                "text": "baking soda"
+            },
+            {
+                "text": "kosher salt"
+            },
+            {
+                "text": "eggs"
+            },
+            {
+                "text": "powdered sugar"
+            },
+            {
+                "text": "smooth peanut butter"
+            },
+            {
+                "text": "real vanilla extract"
+            },
+            {
+                "text": "whole milk"
+            },
+            {
+                "text": "chocolate sprinkles"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            false,
+            false,
+            false,
+            false
+        ],
+        "id": "0007a28fe7",
+        "ingredients": [
+            {
+                "text": "ground beef"
+            },
+            {
+                "text": "bacon"
+            },
+            {
+                "text": "onions"
+            },
+            {
+                "text": "ketchup"
+            },
+            {
+                "text": "salt"
+            },
+            {
+                "text": "brown sugar"
+            },
+            {
+                "text": "mustard"
+            },
+            {
+                "text": "vinegar"
+            },
+            {
+                "text": "white sugar"
+            },
+            {
+                "text": "1 can pork & beans"
+            },
+            {
+                "text": "1 can kidney bean"
+            },
+            {
+                "text": "1 can butter beans"
+            },
+            {
+                "text": "1 can garbanzo beans"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "id": "0007f5f800",
+        "ingredients": [
+            {
+                "text": "stone - ground yellow cornmeal"
+            },
+            {
+                "text": "all - purpose flour"
+            },
+            {
+                "text": "pumpkin seeds"
+            },
+            {
+                "text": "kosher salt"
+            },
+            {
+                "text": "sugar"
+            },
+            {
+                "text": "crushed red pepper flakes"
+            },
+            {
+                "text": "unsalted butter"
+            },
+            {
+                "text": "milk"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true,
+            true
+        ],
+        "id": "00082e1318",
+        "ingredients": [
+            {
+                "text": "onions"
+            },
+            {
+                "text": "margarine"
+            },
+            {
+                "text": "sugar"
+            },
+            {
+                "text": "salt and pepper"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true
+        ],
+        "id": "000875fa03",
+        "ingredients": [
+            {
+                "text": "milk chocolate candy bars"
+            },
+            {
+                "text": "milk"
+            },
+            {
+                "text": "Greek yogurt"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "id": "00089c3010",
+        "ingredients": [
+            {
+                "text": "ground beef"
+            },
+            {
+                "text": "onions"
+            },
+            {
+                "text": "Hunts tomato sauce"
+            },
+            {
+                "text": "diced tomatoes"
+            },
+            {
+                "text": "water"
+            },
+            {
+                "text": "pasta"
+            },
+            {
+                "text": "kidney beans"
+            },
+            {
+                "text": "Kraft Grated Parmesan Cheese"
+            },
+            {
+                "text": "chili powder"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "id": "00089de6f7",
+        "ingredients": [
+            {
+                "text": "gochujang"
+            },
+            {
+                "text": "persimmons"
+            },
+            {
+                "text": "sugar"
+            },
+            {
+                "text": "raspberry extract"
+            },
+            {
+                "text": "soy sauce"
+            },
+            {
+                "text": "udon noodles"
+            },
+            {
+                "text": "English cucumber"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "id": "0008b8f5bc",
+        "ingredients": [
+            {
+                "text": "margarine"
+            },
+            {
+                "text": "instant chocolate pudding mix"
+            },
+            {
+                "text": "egg"
+            },
+            {
+                "text": "flour"
+            },
+            {
+                "text": "sugar"
+            },
+            {
+                "text": "apricot preserves"
+            },
+            {
+                "text": "semi - sweet chocolate chips"
+            },
+            {
+                "text": "margarine"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            false
+        ],
+        "id": "0008de82a3",
+        "ingredients": [
+            {
+                "text": "frozen orange juice concentrate"
+            },
+            {
+                "text": "dry white wine"
+            },
+            {
+                "text": "honey dijon mustard"
+            },
+            {
+                "text": "dried rosemary"
+            },
+            {
+                "text": "soy sauce"
+            },
+            {
+                "text": "Tabasco sauce"
+            },
+            {
+                "text": "garlic clove"
+            },
+            {
+                "text": "hickory chips"
+            },
+            {
+                "text": "2 chicken, each cut into 8 pieces (breasts halved if large)"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "id": "0008e9296d",
+        "ingredients": [
+            {
+                "text": "unsalted butter"
+            },
+            {
+                "text": "fresh rosemary"
+            },
+            {
+                "text": "fresh thyme"
+            },
+            {
+                "text": "salt"
+            },
+            {
+                "text": "rib veal chops"
+            },
+            {
+                "text": "olive oil"
+            },
+            {
+                "text": "rosemary sprig"
+            },
+            {
+                "text": "garlic clove"
+            },
+            {
+                "text": "dry white wine"
+            },
+            {
+                "text": "low sodium chicken broth"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "id": "0008fab425",
+        "ingredients": [
+            {
+                "text": "tagliatelle pasta noodles"
+            },
+            {
+                "text": "butter"
+            },
+            {
+                "text": "garlic cloves"
+            },
+            {
+                "text": "gorgonzola"
+            },
+            {
+                "text": "light cream"
+            },
+            {
+                "text": "fresh basil"
+            },
+            {
+                "text": "salt"
+            },
+            {
+                "text": "pepper"
+            }
+        ]
+    },
+    {
+        "valid": [
+            false,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "id": "000982e226",
+        "ingredients": [
+            {
+                "text": "2/3 cup 1/2-inch butternut squash cubes"
+            },
+            {
+                "text": "cauliflower"
+            },
+            {
+                "text": "broccoli"
+            },
+            {
+                "text": "walnuts"
+            },
+            {
+                "text": "almonds"
+            },
+            {
+                "text": "sunflower seeds"
+            },
+            {
+                "text": "salt"
+            },
+            {
+                "text": "ground cumin"
+            },
+            {
+                "text": "ground black pepper"
+            },
+            {
+                "text": "vegetable oil"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "id": "000984c4d3",
+        "ingredients": [
+            {
+                "text": "lean ground beef"
+            },
+            {
+                "text": "Italian sausage"
+            },
+            {
+                "text": "onions"
+            },
+            {
+                "text": "garlic cloves"
+            },
+            {
+                "text": "celery"
+            },
+            {
+                "text": "green pepper"
+            },
+            {
+                "text": "carrot"
+            },
+            {
+                "text": "salt"
+            },
+            {
+                "text": "pepper"
+            },
+            {
+                "text": "tomato soup"
+            },
+            {
+                "text": "consomme"
+            },
+            {
+                "text": "tomato paste"
+            },
+            {
+                "text": "tomatoes"
+            },
+            {
+                "text": "tomato juice"
+            },
+            {
+                "text": "tomato sauce"
+            },
+            {
+                "text": "parsley"
+            },
+            {
+                "text": "basil"
+            },
+            {
+                "text": "oregano"
+            },
+            {
+                "text": "italian seasoning"
+            },
+            {
+                "text": "cayenne"
+            },
+            {
+                "text": "sage"
+            },
+            {
+                "text": "bay leaves"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "id": "00098bc4cc",
+        "ingredients": [
+            {
+                "text": "boneless skinless chicken breasts"
+            },
+            {
+                "text": "onion"
+            },
+            {
+                "text": "celery ribs"
+            },
+            {
+                "text": "carrots"
+            },
+            {
+                "text": "garlic cloves"
+            },
+            {
+                "text": "butter"
+            },
+            {
+                "text": "olive oil"
+            },
+            {
+                "text": "dried basil"
+            },
+            {
+                "text": "dried oregano"
+            },
+            {
+                "text": "pepper"
+            },
+            {
+                "text": "chicken broth"
+            },
+            {
+                "text": "diced tomatoes"
+            },
+            {
+                "text": "tri - color spiral pasta"
+            },
+            {
+                "text": "all - purpose flour"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true,
+            true
+        ],
+        "id": "000a3447d0",
+        "ingredients": [
+            {
+                "text": "black olives"
+            },
+            {
+                "text": "parmesan cheese"
+            },
+            {
+                "text": "garlic clove"
+            },
+            {
+                "text": "extra virgin olive oil"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "id": "000a3d10fb",
+        "ingredients": [
+            {
+                "text": "green peppers"
+            },
+            {
+                "text": "celery ribs"
+            },
+            {
+                "text": "onion"
+            },
+            {
+                "text": "garlic"
+            },
+            {
+                "text": "boneless chicken breasts"
+            },
+            {
+                "text": "olive oil"
+            },
+            {
+                "text": "tomatoes"
+            },
+            {
+                "text": "chili sauce"
+            },
+            {
+                "text": "ground basil"
+            },
+            {
+                "text": "dried parsley"
+            },
+            {
+                "text": "ground cayenne pepper"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "id": "000ad38272",
+        "ingredients": [
+            {
+                "text": "butter"
+            },
+            {
+                "text": "pork chop"
+            },
+            {
+                "text": "dry white wine"
+            },
+            {
+                "text": "salt"
+            },
+            {
+                "text": "fresh ground black pepper"
+            },
+            {
+                "text": "dried rosemary"
+            },
+            {
+                "text": "garlic cloves"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true,
+            true
+        ],
+        "id": "000b09bc1c",
+        "ingredients": [
+            {
+                "text": "lemon supreme cake mix"
+            },
+            {
+                "text": "Cool Whip"
+            },
+            {
+                "text": "egg"
+            },
+            {
+                "text": "confectioners' sugar"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "id": "000b71bd25",
+        "ingredients": [
+            {
+                "text": "fresh mozzarella balls"
+            },
+            {
+                "text": "baby greens"
+            },
+            {
+                "text": "tomatoes"
+            },
+            {
+                "text": "fresh basil"
+            },
+            {
+                "text": "olive oil"
+            },
+            {
+                "text": "balsamic vinegar"
+            },
+            {
+                "text": "Dijon mustard"
+            },
+            {
+                "text": "salt"
+            },
+            {
+                "text": "fresh ground pepper"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "id": "000b8a8c62",
+        "ingredients": [
+            {
+                "text": "oats"
+            },
+            {
+                "text": "all - purpose flour"
+            },
+            {
+                "text": "white sugar"
+            },
+            {
+                "text": "brown sugar"
+            },
+            {
+                "text": "graham cracker crumbs"
+            },
+            {
+                "text": "ground cinnamon"
+            },
+            {
+                "text": "butter"
+            },
+            {
+                "text": "peanut butter"
+            },
+            {
+                "text": "grape jelly"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "id": "000bba053c",
+        "ingredients": [
+            {
+                "text": "flour"
+            },
+            {
+                "text": "baking soda"
+            },
+            {
+                "text": "salt"
+            },
+            {
+                "text": "sugar"
+            },
+            {
+                "text": "Crisco"
+            },
+            {
+                "text": "eggs"
+            },
+            {
+                "text": "buttermilk"
+            },
+            {
+                "text": "boiling water"
+            },
+            {
+                "text": "all - bran cereal"
+            },
+            {
+                "text": "bran buds"
+            },
+            {
+                "text": "allspice"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "id": "000bcc1e31",
+        "ingredients": [
+            {
+                "text": "noodles"
+            },
+            {
+                "text": "sesame oil"
+            },
+            {
+                "text": "chili - garlic sauce"
+            },
+            {
+                "text": "soy sauce"
+            },
+            {
+                "text": "rice vinegar"
+            },
+            {
+                "text": "green onions"
+            },
+            {
+                "text": "fresh cilantro"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "id": "000bd531d5",
+        "ingredients": [
+            {
+                "text": "boneless skinless chicken breasts"
+            },
+            {
+                "text": "canola oil"
+            },
+            {
+                "text": "miso"
+            },
+            {
+                "text": "light sesame oil"
+            },
+            {
+                "text": "ginger"
+            },
+            {
+                "text": "garlic"
+            },
+            {
+                "text": "red pepper flakes"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "id": "000c3fbb33",
+        "ingredients": [
+            {
+                "text": "small shell pasta"
+            },
+            {
+                "text": "frozen spinach"
+            },
+            {
+                "text": "canned tuna"
+            },
+            {
+                "text": "onions"
+            },
+            {
+                "text": "cheddar cheese"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "id": "000c4d4523",
+        "ingredients": [
+            {
+                "text": "refrigerated crescent dinner rolls"
+            },
+            {
+                "text": "cream cheese"
+            },
+            {
+                "text": "dry ranch dressing mix"
+            },
+            {
+                "text": "mayonnaise"
+            },
+            {
+                "text": "garlic powder"
+            },
+            {
+                "text": "season salt"
+            },
+            {
+                "text": "dill"
+            },
+            {
+                "text": "onions"
+            },
+            {
+                "text": "broccoli"
+            },
+            {
+                "text": "cauliflower"
+            },
+            {
+                "text": "carrots"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "id": "000c9dace9",
+        "ingredients": [
+            {
+                "text": "butter"
+            },
+            {
+                "text": "chicken breasts"
+            },
+            {
+                "text": "chicken broth"
+            },
+            {
+                "text": "penne pasta"
+            },
+            {
+                "text": "frozen broccoli carrots cauliflower mix"
+            },
+            {
+                "text": "ground pepper"
+            },
+            {
+                "text": "condensed cream of chicken soup"
+            },
+            {
+                "text": "milk"
+            },
+            {
+                "text": "parmesan cheese"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "id": "000cc17819",
+        "ingredients": [
+            {
+                "text": "japanese mayonnaise"
+            },
+            {
+                "text": "hot chili sauce"
+            },
+            {
+                "text": "green onions"
+            },
+            {
+                "text": "garlic cloves"
+            },
+            {
+                "text": "prepared horseradish"
+            }
+        ]
+    },
+    {
+        "valid": [
+            false,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "id": "000cc7abe7",
+        "ingredients": [
+            {
+                "text": "4 whole Thin, Boneless Pork Chops"
+            },
+            {
+                "text": "olive oil"
+            },
+            {
+                "text": "milk"
+            },
+            {
+                "text": "seasoned bread crumbs"
+            },
+            {
+                "text": "corn flake crumbs"
+            },
+            {
+                "text": "chicken stock"
+            },
+            {
+                "text": "asiago cheese"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "id": "000d39d105",
+        "ingredients": [
+            {
+                "text": "butter"
+            },
+            {
+                "text": "yellow onions"
+            },
+            {
+                "text": "sugar"
+            },
+            {
+                "text": "salt"
+            },
+            {
+                "text": "black pepper"
+            },
+            {
+                "text": "chicken broth"
+            },
+            {
+                "text": "dry white wine"
+            },
+            {
+                "text": "dried thyme"
+            },
+            {
+                "text": "salt and pepper"
+            },
+            {
+                "text": "swiss cheese"
+            },
+            {
+                "text": "French bread"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            false,
+            true,
+            true,
+            true,
+            true
+        ],
+        "id": "000d5e4996",
+        "ingredients": [
+            {
+                "text": "pineapple"
+            },
+            {
+                "text": "1 medium mango, cut into 1/2-inch-thick slices Whole Foods 2 ea For $4.00 thru 02/09"
+            },
+            {
+                "text": "salad greens"
+            },
+            {
+                "text": "sticks"
+            },
+            {
+                "text": "cherry tomatoes"
+            },
+            {
+                "text": "vinaigrette dressing"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true,
+            false,
+            false,
+            true,
+            true,
+            true
+        ],
+        "id": "000d679873",
+        "ingredients": [
+            {
+                "text": "nonstick cooking spray"
+            },
+            {
+                "text": "boneless skinless chicken breasts"
+            },
+            {
+                "text": "salt"
+            },
+            {
+                "text": "1 can pure pumpkin"
+            },
+            {
+                "text": "1 can stewed tomatoes"
+            },
+            {
+                "text": "peanut butter"
+            },
+            {
+                "text": "water"
+            },
+            {
+                "text": "ground coriander"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "id": "000d73dc07",
+        "ingredients": [
+            {
+                "text": "crabmeat"
+            },
+            {
+                "text": "capers"
+            },
+            {
+                "text": "egg"
+            },
+            {
+                "text": "soft breadcrumbs"
+            },
+            {
+                "text": "mayonnaise"
+            },
+            {
+                "text": "seafood seasoning"
+            },
+            {
+                "text": "onions"
+            },
+            {
+                "text": "celery"
+            },
+            {
+                "text": "sweet red peppers"
+            },
+            {
+                "text": "remoulade sauce"
+            },
+            {
+                "text": "roasted red peppers"
+            },
+            {
+                "text": "olive oil"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "id": "000d94f80b",
+        "ingredients": [
+            {
+                "text": "green onion tops"
+            },
+            {
+                "text": "vegetable oil"
+            },
+            {
+                "text": "onion"
+            },
+            {
+                "text": "leeks"
+            },
+            {
+                "text": "russet potatoes"
+            },
+            {
+                "text": "vegetable broth"
+            },
+            {
+                "text": "fresh ginger"
+            },
+            {
+                "text": "salt"
+            },
+            {
+                "text": "fresh lemon juice"
+            },
+            {
+                "text": "lemon slices"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "id": "000dc3e7e7",
+        "ingredients": [
+            {
+                "text": "olive oil"
+            },
+            {
+                "text": "hot Italian sausage"
+            },
+            {
+                "text": "penne pasta"
+            },
+            {
+                "text": "black kale"
+            },
+            {
+                "text": "roasted red peppers"
+            },
+            {
+                "text": "garlic cloves"
+            },
+            {
+                "text": "parmesan cheese"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "id": "000df26c65",
+        "ingredients": [
+            {
+                "text": "all - purpose flour"
+            },
+            {
+                "text": "white sugar"
+            },
+            {
+                "text": "baking powder"
+            },
+            {
+                "text": "salt"
+            },
+            {
+                "text": "shortening"
+            },
+            {
+                "text": "milk"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "id": "000dfc842f",
+        "ingredients": [
+            {
+                "text": "granulated sugar"
+            },
+            {
+                "text": "all - purpose flour"
+            },
+            {
+                "text": "cocoa"
+            },
+            {
+                "text": "baking powder"
+            },
+            {
+                "text": "salt"
+            },
+            {
+                "text": "milk"
+            },
+            {
+                "text": "butter"
+            },
+            {
+                "text": "vanilla extract"
+            },
+            {
+                "text": "light brown sugar"
+            },
+            {
+                "text": "water"
+            },
+            {
+                "text": "whipped topping"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "id": "000eb2a4d9",
+        "ingredients": [
+            {
+                "text": "bay scallops"
+            },
+            {
+                "text": "fresh lemon juice"
+            },
+            {
+                "text": "fresh lime juice"
+            },
+            {
+                "text": "red onions"
+            },
+            {
+                "text": "yellow bell peppers"
+            },
+            {
+                "text": "pimento stuffed olives"
+            },
+            {
+                "text": "olive oil"
+            },
+            {
+                "text": "fresh cilantro"
+            },
+            {
+                "text": "lime peel"
+            },
+            {
+                "text": "salt"
+            },
+            {
+                "text": "hot red pepper sauce"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "id": "000eb6f05a",
+        "ingredients": [
+            {
+                "text": "butter"
+            },
+            {
+                "text": "red onion"
+            },
+            {
+                "text": "red cabbage"
+            },
+            {
+                "text": "dark brown sugar"
+            },
+            {
+                "text": "caraway seeds"
+            },
+            {
+                "text": "yellow mustard seeds"
+            },
+            {
+                "text": "cider vinegar"
+            },
+            {
+                "text": "dry red wine"
+            },
+            {
+                "text": "tart apple"
+            },
+            {
+                "text": "salt & freshly ground black pepper"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "id": "000ee3c428",
+        "ingredients": [
+            {
+                "text": "hard - boiled eggs"
+            },
+            {
+                "text": "mayonnaise"
+            },
+            {
+                "text": "ham"
+            },
+            {
+                "text": "green onions"
+            },
+            {
+                "text": "Dijon mustard"
+            },
+            {
+                "text": "salt and pepper"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "id": "000f05e911",
+        "ingredients": [
+            {
+                "text": "peanut butter"
+            },
+            {
+                "text": "whole wheat bread"
+            },
+            {
+                "text": "white sugar"
+            },
+            {
+                "text": "salad dressing"
+            },
+            {
+                "text": "tomatoes"
+            },
+            {
+                "text": "salt & fresh ground pepper"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "id": "00100336d5",
+        "ingredients": [
+            {
+                "text": "ground sirloin"
+            },
+            {
+                "text": "yellow onion"
+            },
+            {
+                "text": "green bell pepper"
+            },
+            {
+                "text": "garlic cloves"
+            },
+            {
+                "text": "Rotel tomatoes & chilies"
+            },
+            {
+                "text": "chili starter"
+            },
+            {
+                "text": "warm water"
+            },
+            {
+                "text": "hot sauce"
+            },
+            {
+                "text": "chili powder"
+            },
+            {
+                "text": "onion flakes"
+            },
+            {
+                "text": "paprika"
+            },
+            {
+                "text": "cumin"
+            },
+            {
+                "text": "cayenne pepper"
+            },
+            {
+                "text": "italian seasoning"
+            },
+            {
+                "text": "masa harina flour"
+            },
+            {
+                "text": "olive oil"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "id": "0010923f5c",
+        "ingredients": [
+            {
+                "text": "sugar"
+            },
+            {
+                "text": "flour"
+            },
+            {
+                "text": "salt"
+            },
+            {
+                "text": "baking soda"
+            },
+            {
+                "text": "butter"
+            },
+            {
+                "text": "eggs"
+            },
+            {
+                "text": "vanilla extract"
+            },
+            {
+                "text": "lemon extract"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "id": "0010bf652c",
+        "ingredients": [
+            {
+                "text": "canola oil"
+            },
+            {
+                "text": "onion"
+            },
+            {
+                "text": "celery"
+            },
+            {
+                "text": "Granny Smith apples"
+            },
+            {
+                "text": "scallions"
+            },
+            {
+                "text": "chipotle chile in adobo"
+            },
+            {
+                "text": "ground turkey breast"
+            },
+            {
+                "text": "flat leaf parsley"
+            },
+            {
+                "text": "lemon zest"
+            },
+            {
+                "text": "salt & freshly ground black pepper"
+            },
+            {
+                "text": "reduced - fat mayonnaise"
+            },
+            {
+                "text": "fresh lemon juice"
+            },
+            {
+                "text": "thyme"
+            },
+            {
+                "text": "whole wheat hamburger buns"
+            },
+            {
+                "text": "iceberg lettuce leaves"
+            },
+            {
+                "text": "tomatoes"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "id": "0010cad8ab",
+        "ingredients": [
+            {
+                "text": "salmon fillets"
+            },
+            {
+                "text": "garlic"
+            },
+            {
+                "text": "fresh dill"
+            },
+            {
+                "text": "olive oil"
+            },
+            {
+                "text": "salt and pepper"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "id": "00111b70f6",
+        "ingredients": [
+            {
+                "text": "pineapple juice"
+            },
+            {
+                "text": "brown sugar"
+            },
+            {
+                "text": "light soy sauce"
+            },
+            {
+                "text": "minced garlic cloves"
+            },
+            {
+                "text": "chicken breasts"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "id": "001128ebd8",
+        "ingredients": [
+            {
+                "text": "canola oil"
+            },
+            {
+                "text": "potatoes"
+            },
+            {
+                "text": "seasoning salt"
+            },
+            {
+                "text": "pepper"
+            },
+            {
+                "text": "smoked sausage"
+            },
+            {
+                "text": "green bell pepper"
+            },
+            {
+                "text": "red bell pepper"
+            },
+            {
+                "text": "red onion"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "id": "001148ab26",
+        "ingredients": [
+            {
+                "text": "olive oil"
+            },
+            {
+                "text": "yellow squash"
+            },
+            {
+                "text": "diced onions"
+            },
+            {
+                "text": "green pepper"
+            },
+            {
+                "text": "garlic powder"
+            },
+            {
+                "text": "oregano"
+            },
+            {
+                "text": "dried basil"
+            },
+            {
+                "text": "salt and pepper"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "id": "0011572c6e",
+        "ingredients": [
+            {
+                "text": "self - rising flour"
+            },
+            {
+                "text": "vegetable suet"
+            },
+            {
+                "text": "salt"
+            },
+            {
+                "text": "cold water"
+            },
+            {
+                "text": "steak"
+            },
+            {
+                "text": "flour"
+            },
+            {
+                "text": "tomato puree"
+            },
+            {
+                "text": "onion"
+            },
+            {
+                "text": "dried herbs"
+            },
+            {
+                "text": "beef stock"
+            },
+            {
+                "text": "salt"
+            },
+            {
+                "text": "pepper"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "id": "001160531e",
+        "ingredients": [
+            {
+                "text": "butter"
+            },
+            {
+                "text": "eggs"
+            },
+            {
+                "text": "milk"
+            },
+            {
+                "text": "salt"
+            },
+            {
+                "text": "flour"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "id": "001203700b",
+        "ingredients": [
+            {
+                "text": "unsalted butter"
+            },
+            {
+                "text": "water"
+            },
+            {
+                "text": "onions"
+            },
+            {
+                "text": "garlic cloves"
+            },
+            {
+                "text": "ginger"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "id": "00120e65ba",
+        "ingredients": [
+            {
+                "text": "roast"
+            },
+            {
+                "text": "pancetta"
+            },
+            {
+                "text": "grape tomatoes"
+            },
+            {
+                "text": "salt"
+            },
+            {
+                "text": "fresh ground black pepper"
+            },
+            {
+                "text": "garlic cloves"
+            },
+            {
+                "text": "kalamata olives"
+            },
+            {
+                "text": "water"
+            },
+            {
+                "text": "panko breadcrumbs"
+            },
+            {
+                "text": "olive oil"
+            },
+            {
+                "text": "Dijon mustard"
+            },
+            {
+                "text": "fresh rosemary"
+            },
+            {
+                "text": "flat leaf parsley"
+            },
+            {
+                "text": "string"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "id": "001243534a",
+        "ingredients": [
+            {
+                "text": "hamburger"
+            },
+            {
+                "text": "chili beans"
+            },
+            {
+                "text": "diced tomatoes"
+            },
+            {
+                "text": "condensed tomato soup"
+            },
+            {
+                "text": "onion"
+            },
+            {
+                "text": "macaroni"
+            },
+            {
+                "text": "chili powder"
+            },
+            {
+                "text": "onion powder"
+            },
+            {
+                "text": "sugar"
+            },
+            {
+                "text": "ketchup"
+            },
+            {
+                "text": "beef broth"
+            },
+            {
+                "text": "butter"
+            },
+            {
+                "text": "salt and pepper"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "id": "00125c0174",
+        "ingredients": [
+            {
+                "text": "pork baby back ribs"
+            },
+            {
+                "text": "brown sugar"
+            },
+            {
+                "text": "paprika"
+            },
+            {
+                "text": "garlic powder"
+            },
+            {
+                "text": "black pepper"
+            },
+            {
+                "text": "orange juice"
+            },
+            {
+                "text": "barbecue sauce"
+            },
+            {
+                "text": "Bourbon"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "id": "0012733d1d",
+        "ingredients": [
+            {
+                "text": "shortening"
+            },
+            {
+                "text": "orange extract"
+            },
+            {
+                "text": "orange juice"
+            },
+            {
+                "text": "granulated sugar"
+            },
+            {
+                "text": "eggs"
+            },
+            {
+                "text": "baking powder"
+            },
+            {
+                "text": "all - purpose flour"
+            },
+            {
+                "text": "orange"
+            },
+            {
+                "text": "icing sugar"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "id": "00127b57b1",
+        "ingredients": [
+            {
+                "text": "boneless chicken breasts"
+            },
+            {
+                "text": "swiss cheese"
+            },
+            {
+                "text": "cream of mushroom soup"
+            },
+            {
+                "text": "herb seasoned stuffing mix"
+            },
+            {
+                "text": "butter"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "id": "0012806b36",
+        "ingredients": [
+            {
+                "text": "unsalted butter"
+            },
+            {
+                "text": "whole milk"
+            },
+            {
+                "text": "water"
+            },
+            {
+                "text": "granulated sugar"
+            },
+            {
+                "text": "fine salt"
+            },
+            {
+                "text": "all - purpose flour"
+            },
+            {
+                "text": "eggs"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "id": "001285ff8c",
+        "ingredients": [
+            {
+                "text": "spice cake mix"
+            },
+            {
+                "text": "Libby's canned pumpkin"
+            },
+            {
+                "text": "milk"
+            },
+            {
+                "text": "vegetable oil"
+            },
+            {
+                "text": "eggs"
+            },
+            {
+                "text": "pudding"
+            },
+            {
+                "text": "Cool Whip"
+            },
+            {
+                "text": "ginger snaps"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "id": "00129c6253",
+        "ingredients": [
+            {
+                "text": "orange"
+            },
+            {
+                "text": "ground cumin"
+            },
+            {
+                "text": "ground coriander"
+            },
+            {
+                "text": "ground ginger"
+            },
+            {
+                "text": "hot chili powder"
+            },
+            {
+                "text": "fresh coarse ground black pepper"
+            },
+            {
+                "text": "turmeric"
+            },
+            {
+                "text": "ground cinnamon"
+            },
+            {
+                "text": "salt"
+            },
+            {
+                "text": "sugar"
+            },
+            {
+                "text": "ground cloves"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "id": "00131a818b",
+        "ingredients": [
+            {
+                "text": "all - purpose flour"
+            },
+            {
+                "text": "baking powder"
+            },
+            {
+                "text": "salt"
+            },
+            {
+                "text": "unsalted butter"
+            },
+            {
+                "text": "granulated sugar"
+            },
+            {
+                "text": "brown sugar"
+            },
+            {
+                "text": "egg"
+            },
+            {
+                "text": "vanilla extract"
+            },
+            {
+                "text": "milk"
+            },
+            {
+                "text": "chocolate"
+            },
+            {
+                "text": "unsalted butter"
+            },
+            {
+                "text": "corn syrup"
+            },
+            {
+                "text": "milk"
+            },
+            {
+                "text": "vanilla extract"
+            },
+            {
+                "text": "powdered sugar"
+            },
+            {
+                "text": "food coloring paste"
+            },
+            {
+                "text": "candy sprinkles"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            false,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "id": "0013350f98",
+        "ingredients": [
+            {
+                "text": "garlic cloves"
+            },
+            {
+                "text": "ginger"
+            },
+            {
+                "text": "red pepper"
+            },
+            {
+                "text": "broccoli stem"
+            },
+            {
+                "text": "broccoli florets"
+            },
+            {
+                "text": "snow peas"
+            },
+            {
+                "text": "boneless skinless chicken breasts"
+            },
+            {
+                "text": "1 teaspoon Soy Sauce, Or More As Desired"
+            },
+            {
+                "text": "vegetable oil"
+            },
+            {
+                "text": "jasmine rice"
+            },
+            {
+                "text": "green onions"
+            },
+            {
+                "text": "smooth peanut butter"
+            },
+            {
+                "text": "soy sauce"
+            },
+            {
+                "text": "red pepper flakes"
+            },
+            {
+                "text": "lime"
+            },
+            {
+                "text": "light brown sugar"
+            },
+            {
+                "text": "hot water"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "id": "001341d70b",
+        "ingredients": [
+            {
+                "text": "canola oil"
+            },
+            {
+                "text": "walnut halves"
+            },
+            {
+                "text": "fresh orange juice"
+            },
+            {
+                "text": "rice vinegar"
+            },
+            {
+                "text": "soy sauce"
+            },
+            {
+                "text": "honey"
+            },
+            {
+                "text": "cornstarch"
+            },
+            {
+                "text": "scallions"
+            },
+            {
+                "text": "oranges"
+            },
+            {
+                "text": "fresh ginger"
+            },
+            {
+                "text": "garlic"
+            },
+            {
+                "text": "dried chilies"
+            },
+            {
+                "text": "head broccoli"
+            },
+            {
+                "text": "carrots"
+            },
+            {
+                "text": "red bell pepper"
+            },
+            {
+                "text": "chicken broth"
+            },
+            {
+                "text": "toasted sesame oil"
+            },
+            {
+                "text": "oranges"
+            },
+            {
+                "text": "cooked rice"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "id": "001351e350",
+        "ingredients": [
+            {
+                "text": "yolk - free egg noodles"
+            },
+            {
+                "text": "all - purpose flour"
+            },
+            {
+                "text": "reduced - sodium chicken broth"
+            },
+            {
+                "text": "grapeseed oil"
+            },
+            {
+                "text": "diced onion"
+            },
+            {
+                "text": "nonfat milk"
+            },
+            {
+                "text": "Dijon mustard"
+            },
+            {
+                "text": "fresh tarragon"
+            },
+            {
+                "text": "frozen peas"
+            },
+            {
+                "text": "chicken"
+            },
+            {
+                "text": "reduced - fat cheddar cheese"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "id": "00147ea7f2",
+        "ingredients": [
+            {
+                "text": "lean ground turkey"
+            },
+            {
+                "text": "Minute Rice"
+            },
+            {
+                "text": "water"
+            },
+            {
+                "text": "onions"
+            },
+            {
+                "text": "salt"
+            },
+            {
+                "text": "pepper"
+            },
+            {
+                "text": "garlic powder"
+            },
+            {
+                "text": "celery salt"
+            },
+            {
+                "text": "tomato sauce"
+            },
+            {
+                "text": "tomato sauce"
+            },
+            {
+                "text": "Worcestershire sauce"
+            },
+            {
+                "text": "water"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true
+        ],
+        "id": "0014d329aa",
+        "ingredients": [
+            {
+                "text": "water"
+            },
+            {
+                "text": "salt"
+            },
+            {
+                "text": "yellow cornmeal"
+            }
+        ]
+    },
+    {
+        "valid": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "id": "0014f77398",
+        "ingredients": [
+            {
+                "text": "tomatoes"
+            },
+            {
+                "text": "fresh basil"
+            },
+            {
+                "text": "salt"
+            },
+            {
+                "text": "fresh portabella mushrooms"
+            },
+            {
+                "text": "balsamic vinegar"
+            },
+            {
+                "text": "olive oil"
+            },
+            {
+                "text": "focaccia bread"
+            },
+            {
+                "text": "parmesan cheese"
+            }
+        ]
+    }
+]
