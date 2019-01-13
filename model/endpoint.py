@@ -1,9 +1,11 @@
 import base64
+import io
 
 import keras
 import numpy as np
 import skimage.io
 import tensorflow
+from PIL import Image
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from tensorflow.python.client import session
@@ -41,7 +43,9 @@ def predict_image(img):
     with graph.as_default():
         main.setup_train_data()
         all_ingredient_combinations = list(map(lambda entry: entry['ingredients'], main.train_data))
+        print(img)
         img = main.preprocess(skimage.io.imread(img, plugin='imageio'))
+        print(img)
         img_repeated = [img for _ in range(len(all_ingredient_combinations))]
         predictions = model.predict([np.array(all_ingredient_combinations), np.squeeze(np.array(img_repeated))])
         predictions = np.array(predictions)
@@ -63,7 +67,12 @@ def predict_ingredients(ingredients):
                                 range(len(all_images))]
         predictions = np.array(model.predict([np.array(ingredients_repeated), np.array([main.preprocess(imng)[0] for imng in all_images])]))
         predicted_image = main.train_data[np.argmin(predictions)]['image']
-        return predicted_image
+        print(predicted_image)
+        img = Image.fromarray(predicted_image)  # .resize((100, 100))
+        imgByteArr = io.BytesIO()
+        img.save(imgByteArr, format='PNG')
+        imgByteArr = imgByteArr.getvalue()
+        return imgByteArr
 
 
 @app.route('/image', methods=['POST'])
@@ -73,6 +82,8 @@ def classify_image():
 
 @app.route('/ingredients', methods=['POST'])
 def classify_ingredients():
+    print(request.json['ingredients'])
+    # return jsonify(image=predict_ingredients(request.json['ingredients']))
     return jsonify(image=base64.b64encode(predict_ingredients(request.json['ingredients'])).decode('ascii')+"")
 
 

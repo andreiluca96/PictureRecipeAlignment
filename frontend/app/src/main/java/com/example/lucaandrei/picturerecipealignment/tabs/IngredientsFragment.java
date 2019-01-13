@@ -3,11 +3,13 @@ package com.example.lucaandrei.picturerecipealignment.tabs;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.annotation.RequiresApi;
 import android.support.v4.app.Fragment;
+import android.util.LruCache;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -30,12 +32,15 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Base64;
+import java.util.concurrent.TimeUnit;
+
+import static com.example.lucaandrei.picturerecipealignment.cache.ImageCache.addBitmapToMemoryCache;
 
 public class IngredientsFragment extends Fragment {
     private static final String INGREDIENTS_URL = "http://10.0.2.2:5000/ingredients";
-
     public IngredientsFragment() {
         // Required empty public constructor
+
 
     }
 
@@ -59,21 +64,18 @@ public class IngredientsFragment extends Fragment {
 
         final Activity act = this.getActivity();
 
-        add.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //get the ingredient from input field
-                EditText addIngredientComponent = act.findViewById(R.id.ingredient_input);
-                String ingredient = addIngredientComponent.getText().toString();
+        add.setOnClickListener(view -> {
+            //get the ingredient from input field
+            EditText addIngredientComponent = act.findViewById(R.id.ingredient_input);
+            String ingredient = addIngredientComponent.getText().toString();
 
-                //add the new ingredient to list view
-                ingredients.add(ingredient);
+            //add the new ingredient to list view
+            ingredients.add(ingredient);
 
-                //reset input
-                addIngredientComponent.setText("");
+            //reset input
+            addIngredientComponent.setText("");
 
-                itemsAdapter.notifyDataSetChanged();
-            }
+            itemsAdapter.notifyDataSetChanged();
         });
 
         Button submit = this.getActivity().findViewById(R.id.submit_ingredients);
@@ -81,7 +83,8 @@ public class IngredientsFragment extends Fragment {
             try {
                 String ingredientsJsonList = ingredients
                         .stream()
-                        .reduce((s1, s2) -> "\"" + s1 + "\",\"" + s2 + "\"")
+                        .map(s -> "\"" + s + "\"")
+                        .reduce((s1, s2) -> s1 + "," + s2)
                         .orElse("");
 
                 String ingredientsJson =
@@ -92,28 +95,27 @@ public class IngredientsFragment extends Fragment {
                 RequestBody body = RequestBody.create(MediaType.parse("application/json; charset=utf-8"), ingredientsJson);
 
                 OkHttpClient client = new OkHttpClient();
+                client.setConnectTimeout(30, TimeUnit.SECONDS);
+                client.setReadTimeout(30, TimeUnit.SECONDS);
+                client.setWriteTimeout(30, TimeUnit.SECONDS);
                 Request request = new Request.Builder()
                         .post(body)
                         .url(INGREDIENTS_URL)
                         .build();
 
-                final Response[] response = {null};
+                Response response = client.newCall(request).execute();
+                JSONObject jsonBody = new JSONObject(response.body().string());
 
-                Thread thread = new Thread(() -> {
-                    try {
-                        response[0] = client.newCall(request).execute();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                });
-                thread.start();
-                thread.join();
+                String base64EncodedImage = jsonBody.getString("image");
+                byte[] decodedImage = Base64.getDecoder().decode(base64EncodedImage);
 
-                byte[] bodyBytes = response[0].body().bytes();
+                System.out.println(decodedImage.length);
+
+                addBitmapToMemoryCache("image", decodedImage);
 
                 Intent myIntent = new Intent(act, ResultActivity.class);
-                myIntent.putExtra("image", bodyBytes);
-                myIntent.putExtra("ingredients", ingredients);
+//                myIntent.putExtra("image", decodedImage);
+                myIntent.putExtra("ingredients", ingredients.toArray(new String[0]));
                 act.startActivity(myIntent);
                 // empty ingredients list
                 itemsAdapter.notifyDataSetChanged();

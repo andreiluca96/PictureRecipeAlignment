@@ -15,6 +15,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import static com.example.lucaandrei.picturerecipealignment.cache.ImageCache.clearMemCache;
+import static com.example.lucaandrei.picturerecipealignment.cache.ImageCache.getBitmapFromMemCache;
+
 public class ResultActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +27,8 @@ public class ResultActivity extends AppCompatActivity {
         final ListView list = findViewById(R.id.result_ingredients);
 
         Intent intent = getIntent();
-        byte[] image = intent.getByteArrayExtra("image");
+//        byte[] image = intent.getByteArrayExtra("image");
+        byte[] image = getBitmapFromMemCache("image");
         String[] ingredientsArray = intent.getStringArrayExtra("ingredients");
 
         final List<String> ingredients = new ArrayList<>(Arrays.asList(ingredientsArray));
@@ -33,15 +37,11 @@ public class ResultActivity extends AppCompatActivity {
         list.setAdapter(itemsAdapter);
 
         final Bitmap bmp = BitmapFactory.decodeByteArray(image, 0, image.length);
+        clearMemCache();
         final ImageView imageView = findViewById(R.id.resultImage);
 
-        imageView.post(new Runnable() {
-            @Override
-            public void run() {
-                imageView.setImageBitmap(Bitmap.createScaledBitmap(bmp, imageView.getWidth(),
-                        imageView.getHeight(), false));
-            }
-        });
+        imageView.post(() -> imageView.setImageBitmap(Bitmap.createScaledBitmap(bmp, imageView.getWidth(),
+                imageView.getHeight(), false)));
     }
 
     @Override

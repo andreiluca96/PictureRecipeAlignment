@@ -27,6 +27,8 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
+import static com.example.lucaandrei.picturerecipealignment.cache.ImageCache.addBitmapToMemoryCache;
+
 public class ImageSelectionMenuActivity extends AppCompatActivity {
 
     public static final int PICK_IMAGE = 1;
@@ -104,7 +106,8 @@ public class ImageSelectionMenuActivity extends AppCompatActivity {
 
 
                 Intent myIntent = new Intent(this, ResultActivity.class);
-                myIntent.putExtra("image", byteArray);
+//                myIntent.putExtra("image", byteArray);
+                addBitmapToMemoryCache("image", byteArray);
                 myIntent.putExtra("ingredients", ingredients);
                 this.startActivity(myIntent);
             } catch (IOException | JSONException e) {
