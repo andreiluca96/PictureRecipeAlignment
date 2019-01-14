@@ -11,10 +11,10 @@ from skimage.transform import resize
 
 from model import ResNet152
 
-ANNOTATED_FILE = './data/det_ingrs_truncated.json'
-MAPPING_FILE = './data/layer2_truncated.json'
-PHOTOS_FOLDER = './data/photos'
-IMAGE_FOLDER = 'D:/Master/IA/Data_1/imagini'
+ANNOTATED_FILE = './util/truncated-det-ingrs-5.json'
+MAPPING_FILE = './util/truncated-layer2-5.json'
+PHOTOS_FOLDER = 'D:/Master/IA/Data_1/imagini'
+IMAGE_FOLDER = 'D:\\Master\\IA\\Data_1\\imagini'
 train_data = []
 all_ingredients = []
 ingredients_one_hot_position = {}
@@ -50,7 +50,7 @@ def load_image(image_name):
 
 
 def preprocess(x):
-    x = resize(x, (224, 224), mode='constant') * 255
+    x = resize(x, (224, 224, 3), mode='constant') * 255
     x = preprocess_input(x)
     if x.ndim == 3:
         x = np.expand_dims(x, 0)
@@ -125,17 +125,15 @@ def setup_model():
 
 if __name__ == "__main__":
     setup_train_data()
-    merged_model = setup_model()
-    merged_model.fit(
-        [np.array(list(map(lambda x: x['ingredients'], train_data))), np.array(list(map(lambda x: preprocess(x['image'])[0], train_data)))],
-        np.zeros((len(train_data))), epochs=10, validation_split=0.1)
+    # merged_model = setup_model()
+    # merged_model.fit(
+    #     [np.array(list(map(lambda x: x['ingredients'], train_data))), np.array(([preprocess(x['image'])[0] for x in train_data]))],
+    #     np.zeros((len(train_data))),
+    #     epochs=10,
+    #     validation_split=0.1)
 
     # merged_model.predict(
     #     x=[[list(map(lambda x: x['ingredients'], train_data))[2]], [list(map(lambda x: preprocess(x['image'])[0], train_data))[2]]])
     #
 
-    merged_model.save(filepath="model3.h5")
-    test_image = load_image("test_image1.jpg")
-    merged_model.predict(
-        x=[np.array(list(map(lambda x: x['ingredients'], train_data))),
-           np.array([preprocess(test_image)[0] for i in range(5)])])
+    # merged_model.save(filepath="model3.h5")

@@ -1,6 +1,6 @@
 import json
 
-NO_ITEMS = 2
+NO_ITEMS = 5
 DET_INGRS_PATH = "../../../data/det_ingrs.json"
 
 if __name__ == "__main__":

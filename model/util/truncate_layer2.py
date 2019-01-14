@@ -3,7 +3,7 @@ import os
 
 LAYER2_PATH = "../../../data/layer2.json"
 IMAGES_DIRECTORY_PATH = "../../../Data_1/imagini"
-NO_ITEMS = 2
+NO_ITEMS = 5
 
 if __name__ == "__main__":
     with open("truncated-layer2-" + str(NO_ITEMS) + ".json", "w") as truncated_file:
