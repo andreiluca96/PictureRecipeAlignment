@@ -3,12 +3,12 @@ package com.fii.picture.recipe.alignment.searchableencryption.service;
 /**
  * Created by Ariana on 1/14/2019.
  */
+
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
-import java.io.FileReader;
-import java.io.PrintWriter;
+import java.io.*;
 import java.util.*;
 
 public class JsonUtil
@@ -137,4 +137,45 @@ public class JsonUtil
 
         return recordIds;
     }
+
+    public static String translatetoPictureJson(Integer recordIdForSearch) throws Exception {
+        String PathName = new String();
+
+        Object obj = new JSONParser().parse(new FileReader("D:\\Facultate\\master1\\masterIP\\PictureRecipeAlignment\\SSE\\javaSSE\\src\\main\\java\\jsse\\truncated_layer2.json"));
+        // parsing file "JSONExample.json"
+        JSONArray jsonArr = (JSONArray) obj;
+        JSONObject jsonObject  = (JSONObject)jsonArr.get(recordIdForSearch);
+        JSONArray imagesArray = (JSONArray) jsonObject.get("images");
+        JSONObject firstImage = (JSONObject) imagesArray.get(0);
+        String firstImageToString = (String) firstImage.get("id");
+
+
+        return firstImageToString;
+    }
+
+    public static String GetBase64Image(String filePath){
+        File file =  new File(filePath);
+        String encodedfile = null;
+
+        try {
+            FileInputStream fileInputStreamReader = new FileInputStream(file);
+            byte[] bytes = new byte[(int)file.length()];
+            fileInputStreamReader.read(bytes);
+            encodedfile = Base64.getEncoder().encodeToString(bytes);
+        } catch (FileNotFoundException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+
+        return encodedfile;
+    }
+
 }
+
+
+
+
+

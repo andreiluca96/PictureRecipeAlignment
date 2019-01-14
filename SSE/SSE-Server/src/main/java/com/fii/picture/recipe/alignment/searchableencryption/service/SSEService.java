@@ -14,11 +14,12 @@ public class SSEService implements CrudService{
     private double loadFactor = 1;
 
     @Override
-    public List getAll(String id)throws Exception {
+    public String getAll(String id)throws Exception {
         password = "test"; // NOT FOR PRODUCTION
         Security.addProvider(new BouncyCastleProvider());
 
         List<Integer> recordIds = new ArrayList<Integer>();
+        String picture = new String();
         try {
             final SecretKeySpec secretKeySpec = SSEUtil.getSecretKeySpec(password,
                     SSEUtil.getRandomBytes(20));
@@ -29,12 +30,15 @@ public class SSEService implements CrudService{
             JsonUtil.translateToEncryptedJSON();
             byte[] searchPlainText = (id).getBytes();
             recordIds = JsonUtil.searchEncryptedJSON(searchPlainText);
+            picture = JsonUtil.translatetoPictureJson(recordIds.get(0));
+            String PathName = "D:\\Facultate\\master1\\masterIP\\PictureRecipeAlignment\\data\\truncated_layer2_images\\" + picture;
+            picture = JsonUtil.GetBase64Image(PathName);
 
         } catch (Exception e){
             e.printStackTrace();
         }
 
-        return recordIds;
+        return picture;
     }
 
     public void testJsonUtil() throws Exception {
