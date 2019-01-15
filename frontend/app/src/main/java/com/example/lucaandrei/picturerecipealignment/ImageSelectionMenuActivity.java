@@ -26,6 +26,7 @@ import org.json.JSONObject;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.concurrent.TimeUnit;
 
 import static com.example.lucaandrei.picturerecipealignment.cache.ImageCache.addBitmapToMemoryCache;
 
@@ -89,6 +90,9 @@ public class ImageSelectionMenuActivity extends AppCompatActivity {
                 RequestBody body = RequestBody.create(MediaType.parse("application/json; charset=utf-8"), requestBody.toString());
 
                 OkHttpClient client = new OkHttpClient();
+                client.setConnectTimeout(30, TimeUnit.SECONDS);
+                client.setReadTimeout(30, TimeUnit.SECONDS);
+                client.setWriteTimeout(30, TimeUnit.SECONDS);
                 Request request = new Request.Builder()
                         .post(body)
                         .url(IMG_URL)

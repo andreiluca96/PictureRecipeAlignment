@@ -1,4 +1,6 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="match_parent"
     >
@@ -61,14 +63,28 @@
             android:id="@+id/submit_ingredients"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="32dp"
-            android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
-            android:text="Submit"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="84dp"
             android:onClick="onButtonSubmitClick"
+            android:text="Submit"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
+
+        <Switch
+            android:id="@+id/use_sse"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:layout_marginStart="160dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="159dp"
+            android:layout_marginBottom="21dp"
+            android:text="SSE"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/submit_ingredients" />
     </android.support.constraint.ConstraintLayout>
 </FrameLayout>
 </ScrollView>

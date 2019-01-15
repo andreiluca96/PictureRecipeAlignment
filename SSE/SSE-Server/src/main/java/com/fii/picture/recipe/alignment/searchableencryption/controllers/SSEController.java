@@ -1,5 +1,6 @@
 package com.fii.picture.recipe.alignment.searchableencryption.controllers;
 
+import com.fii.picture.recipe.alignment.searchableencryption.Dto.SSEResponse;
 import com.fii.picture.recipe.alignment.searchableencryption.service.SSEService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -19,12 +20,15 @@ public class SSEController {
     private SSEService sseService;
 
     @RequestMapping(value = "/recipe/{id}", method = RequestMethod.GET)
-    public ResponseEntity<String> getRecipes(@PathVariable("id") String id) throws Exception {
+    public ResponseEntity<SSEResponse> getRecipes(@PathVariable("id") String id) throws Exception {
         String picture = this.sseService.getAll(id);
 
         if (picture == null) {
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         }
-        return new ResponseEntity<String>(picture, HttpStatus.OK);
+
+        SSEResponse response = new SSEResponse();
+        response.setImage(picture);
+        return new ResponseEntity<>(response, HttpStatus.OK);
     }
 }

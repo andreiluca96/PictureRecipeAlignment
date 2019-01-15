@@ -11,9 +11,9 @@ from skimage.transform import resize
 
 from model import ResNet152
 
-ANNOTATED_FILE = './data/det_ingrs_truncated.json'
-MAPPING_FILE = './data/layer2_truncated.json'
-PHOTOS_FOLDER = './data/photos'
+ANNOTATED_FILE = './data/truncated-det-ingrs-specialized.json'
+MAPPING_FILE = './data/truncated-layer2-specialized (1).json'
+PHOTOS_FOLDER = './data/photos/specialized_training_data'
 IMAGE_FOLDER = 'D:/Master/IA/Data_1/imagini'
 train_data = []
 all_ingredients = []
@@ -90,6 +90,8 @@ def setup_train_data():
                 current_ingredients_list.append(real_text)
                 all_ingredients.add(real_text)
         train_texts.append({'ingredients': current_ingredients_list, 'id': x['id']})
+
+    print(all_ingredients)
 
     global ingredients_one_hot_position
     for idx, ingr in enumerate(all_ingredients):

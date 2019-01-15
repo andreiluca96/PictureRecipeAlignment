@@ -15,6 +15,7 @@ import main
 app = Flask(__name__)
 CORS(app)
 graph = 0
+model = 0
 
 
 def create_model():
@@ -29,8 +30,10 @@ def create_model():
     if 'session' in locals() and session is not None:
         print('Close interactive session')
         session.close()
+    global model
     model = main.setup_model()
-    model.load_weights('model3.h5')
+    # model.load_weights('model3.h5')
+    model.load_weights('batch-model60.h5')
     model._make_predict_function()
     return model
 
@@ -41,7 +44,7 @@ def preprocess_image(img):
 
 def predict_image(img):
     with graph.as_default():
-        main.setup_train_data()
+        # main.setup_train_data()
         all_ingredient_combinations = list(map(lambda entry: entry['ingredients'], main.train_data))
         print(img)
         img = main.preprocess(skimage.io.imread(img, plugin='imageio'))
@@ -60,7 +63,7 @@ def predict_image(img):
 
 def predict_ingredients(ingredients):
     with graph.as_default():
-        main.setup_train_data()
+        # main.setup_train_data()
         known_ingredients = list(filter(lambda x: x in main.all_ingredients, ingredients))
         all_images = list(map(lambda entry: entry['image'], main.train_data))
         ingredients_repeated = [main.to_one_hot(known_ingredients, main.ingredients_one_hot_position) for _ in
