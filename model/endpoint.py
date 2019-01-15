@@ -15,6 +15,7 @@ import main
 app = Flask(__name__)
 CORS(app)
 graph = 0
+model = 0
 
 
 def create_model():
@@ -29,6 +30,7 @@ def create_model():
     if 'session' in locals() and session is not None:
         print('Close interactive session')
         session.close()
+    global model
     model = main.setup_model()
     # model.load_weights('model3.h5')
     model.load_weights('batch-model60.h5')
