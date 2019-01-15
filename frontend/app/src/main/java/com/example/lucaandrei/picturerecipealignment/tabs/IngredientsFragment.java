@@ -36,7 +36,7 @@ import static com.example.lucaandrei.picturerecipealignment.cache.ImageCache.add
 
 public class IngredientsFragment extends Fragment {
     private static final String INGREDIENTS_URL = "http://10.0.2.2:5000/ingredients";
-    private static final String INGREDIENTS_SSE_URL = "http://10.0.2.2:5000/v1/sse/recipe/";
+    private static final String INGREDIENTS_SSE_URL = "http://10.0.2.2:8080/v1/sse/recipe/";
     public IngredientsFragment() {
         // Required empty public constructor
 

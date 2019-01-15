@@ -17,14 +17,14 @@ public class JsonUtil
 
     public static void translateToDecryptedJSON() throws Exception
     {
-        Object obj = new JSONParser().parse(new FileReader("D:\\Facultate\\master1\\masterIP\\PictureRecipeAlignment\\SSE\\javaSSE\\src\\main\\java\\jsse\\truncated-det-ingrs-100.json"));
+        Object obj = new JSONParser().parse(new FileReader("F:\\Facultate\\Master\\ASET\\PictureRecipeAlignment\\SSE\\javaSSE\\src\\main\\java\\jsse\\truncated-det-ingrs-100.json"));
         // parsing file "JSONExample.json"
         JSONArray jsonArr = (JSONArray) obj;
         JSONArray finalJsonArr = new JSONArray();
 
         int recordId = 1;
         // getting firstName and lastName
-        for( Object jo : jsonArr){
+        for (Object jo : jsonArr) {
 
             JSONObject jsonObject  = (JSONObject) jo;
             JSONObject finalJsonObject  = new JSONObject();
@@ -53,7 +53,7 @@ public class JsonUtil
         }
 
         // writing JSON to file:"JSONExample.json" in cwd
-        PrintWriter pw = new PrintWriter("D:\\Facultate\\master1\\masterIP\\PictureRecipeAlignment\\SSE\\javaSSE\\src\\main\\java\\jsse\\decrypted-truncated-det-ingrs-100.json");
+        PrintWriter pw = new PrintWriter("F:\\Facultate\\Master\\ASET\\PictureRecipeAlignment\\SSE\\javaSSE\\src\\main\\java\\jsse\\decrypted-truncated-det-ingrs-100.json");
         pw.write(finalJsonArr.toJSONString());
 
         pw.flush();
@@ -62,7 +62,7 @@ public class JsonUtil
 
     public static void translateToEncryptedJSON() throws Exception
     {
-        Object obj = new JSONParser().parse(new FileReader("D:\\Facultate\\master1\\masterIP\\PictureRecipeAlignment\\SSE\\javaSSE\\src\\main\\java\\jsse\\decrypted-truncated-det-ingrs-100.json"));
+        Object obj = new JSONParser().parse(new FileReader("F:\\Facultate\\Master\\ASET\\PictureRecipeAlignment\\SSE\\javaSSE\\src\\main\\java\\jsse\\decrypted-truncated-det-ingrs-100.json"));
         // parsing file "JSONExample.json"
         JSONArray jsonArr = (JSONArray) obj;
         JSONArray finalJsonArr = new JSONArray();
@@ -102,7 +102,7 @@ public class JsonUtil
         }
 
         // writing JSON to file:"JSONExample.json" in cwd
-        PrintWriter pw = new PrintWriter("D:\\Facultate\\master1\\masterIP\\PictureRecipeAlignment\\SSE\\javaSSE\\src\\main\\java\\jsse\\encrypted-truncated-det-ingrs-100.json");
+        PrintWriter pw = new PrintWriter("F:\\Facultate\\Master\\ASET\\PictureRecipeAlignment\\SSE\\javaSSE\\src\\main\\java\\jsse\\encrypted-truncated-det-ingrs-100.json");
         pw.write(finalJsonArr.toJSONString());
 
         pw.flush();
@@ -111,7 +111,7 @@ public class JsonUtil
 
     public static List<Integer> searchEncryptedJSON(byte[] searchPlainText) throws Exception
     {
-        Object obj = new JSONParser().parse(new FileReader("D:\\Facultate\\master1\\masterIP\\PictureRecipeAlignment\\SSE\\javaSSE\\src\\main\\java\\jsse\\encrypted-truncated-det-ingrs-100.json"));
+        Object obj = new JSONParser().parse(new FileReader("F:\\Facultate\\Master\\ASET\\PictureRecipeAlignment\\SSE\\javaSSE\\src\\main\\java\\jsse\\encrypted-truncated-det-ingrs-100.json"));
         // parsing file "JSONExample.json"
         JSONArray jsonArr = (JSONArray) obj;
         List<Integer> recordIds = new ArrayList<>();
@@ -141,7 +141,7 @@ public class JsonUtil
     public static String translatetoPictureJson(Integer recordIdForSearch) throws Exception {
         String PathName = new String();
 
-        Object obj = new JSONParser().parse(new FileReader("D:\\Facultate\\master1\\masterIP\\PictureRecipeAlignment\\SSE\\javaSSE\\src\\main\\java\\jsse\\truncated_layer2.json"));
+        Object obj = new JSONParser().parse(new FileReader("F:\\Facultate\\Master\\ASET\\PictureRecipeAlignment\\data\\truncated_layer2.json"));
         // parsing file "JSONExample.json"
         JSONArray jsonArr = (JSONArray) obj;
         JSONObject jsonObject  = (JSONObject)jsonArr.get(recordIdForSearch);

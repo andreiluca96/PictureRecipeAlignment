@@ -31,7 +31,7 @@ public class SSEService implements CrudService{
             byte[] searchPlainText = (id).getBytes();
             recordIds = JsonUtil.searchEncryptedJSON(searchPlainText);
             picture = JsonUtil.translatetoPictureJson(recordIds.get(0));
-            String PathName = "D:\\Facultate\\master1\\masterIP\\PictureRecipeAlignment\\data\\truncated_layer2_images\\" + picture;
+            String PathName = "F:\\Facultate\\Master\\ASET\\PictureRecipeAlignment\\data\\truncated_layer2_images\\" + picture;
             picture = JsonUtil.GetBase64Image(PathName);
 
         } catch (Exception e){
